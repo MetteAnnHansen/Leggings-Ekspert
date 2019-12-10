@@ -400,12 +400,14 @@ body {
 
 @media only screen and (min-width: 1651px) and (max-width: 3000px) {
   .toptext1 {
-    transform: translateY(-100px);
+    transform: translateY(10px);
     font-size: 40px;
+
   }
   .toptext2 {
-    transform: translateY(-350px);
+    transform: translateY(20px);
     font-size: 40px;
+  
   }
   #bodyindeing2 {
     display: inline-block;
@@ -422,15 +424,16 @@ body {
     z-index: 1;
     position: relative;
     background-color: #3e196a;
-    height: 100vh;
+    height: 130vh;
     margin-left: -1%;
+
   }
 
   #rightside {
     height: 600px;
     transform: translateY(-1200px);
-    margin-left: 70%;
-    width: 100%;
+    margin-left: 75%;
+    width: 110%;
     z-index: 2;
     background-color: #5c2f92;
     background-color: rgba(128, 255, 0, 0.226);
@@ -465,7 +468,7 @@ body {
     text-decoration: none;
     text-shadow: 0px 1px 0px #ffffff;
     font-family: Arial, Helvetica, sans-serif;
-    transform: translateY(35vh);
+    transform: translateY(70vh);
     margin-left: 15%;
     position: relative;
     z-index: 3;
