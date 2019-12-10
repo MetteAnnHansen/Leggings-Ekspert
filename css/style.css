@@ -1,3 +1,52 @@
+/*dfaults-- globals-------------------------------*/
+
+.buttonprodukt {
+  background: none;
+  border: 1px solid #3c226b;
+  display: inline-block;
+  cursor: pointer;
+  color: #3c226b;
+  font-family: Arial;
+  font-size: 26px;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffffff;
+  font-family: "Noto Serif JP", serif;
+  transform: translateY(2vh);
+  margin-left: 0%;
+  position: relative;
+  z-index: 3;
+}
+
+.textwarpper {
+  margin-left: 15%;
+  transform: translatey(25vh);
+  width: 40%;
+  z-index: 3;
+  position: relative;
+}
+.textwarpper > h1,
+h2 {
+  color: whitesmoke;
+  font-family: "Noto Serif JP", serif;
+}
+
+/*instagram forside-----------------------------------------------*/
+.insta {
+  overflow: hidden; /* otherwise header image won't respect rounded corners */
+  background: none;
+  transition: all 0.5s ease;
+  box-sizing: border-box;
+  height: 300px;
+  width: 300px;
+  /* back to normal */
+}
+.insta:hover {
+  transform: translate3D(0, 1px, 0) scale(1.1); /* move up slightly and zoom in */
+  transition: all 0.4s ease; /* zoom in */
+  cursor: pointer;
+}
+
 body {
   overflow-x: hidden;
   background-color: rgb(255, 255, 255);
@@ -26,7 +75,7 @@ body {
 
 /*event side css----------------------------------------------------*/
 
-@media only screen and (min-width: 768px) and (max-width: 1650px) {
+@media only screen and (min-width: 500px) and (max-width: 1650px) {
   #video {
     margin-top: 5%;
     margin-left: 2%;
@@ -50,11 +99,53 @@ body {
     position: relative;
     z-index: 99;
   }
+
+  /*produkter-------------------------------*/
+  .produkt {
+    width: 100%;
+
+    overflow: hidden;
+    background: none;
+    transition: all 0.5s ease;
+    /* transistion tilbage til alminde størrelse */
+    padding: 2%;
+  }
+
+  .produktcard_image {
+    width: 100%; /* for at være sikker på at billede scaler korrket med boxen*/
+    height: auto;
+    border: 5px solid #3c226b;
+    border-radius: 4px;
+  }
+  .produkt_text {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5%;
+    width: 100%;
+    padding-top: 0%;
+  }
+  .produkt_text > h2 {
+    color: #3c226b;
+  }
+  .containerprodukt {
+    transform: translateY(0%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    flex-flow: wrap;
+  }
+  .buttonprodukt {
+    font-size: 26px;
+    padding: 6px 24px;
+    transform: translateY(2vh);
+    margin-left: 0%;
+    z-index: 3;
+  }
 }
 
 .events:hover {
-  transform: translate3D(0, -1px, 0) scale(1.03); /* move up slightly and zoom in */
-
+  transform: translate3D(0, -1px, 0) scale(20.03); /* move up slightly and zoom in */
   transition: all 0.4s ease; /* zoom in */
   cursor: pointer;
 }
@@ -66,16 +157,19 @@ body {
 }
 
 .card_text,
-.card_text h2 {
+.card_text h2,
+.instatext {
   width: 100%;
   padding-top: 0%;
   color: #3c226b;
+  font-family: "Noto Serif JP", serif;
 }
 
 h2 {
   margin: 8px 0px 12px 0px;
 }
 
+/*event side css---------------------------------------------------------------------------------*/
 @media only screen and (min-width: 1950px) and (max-width: 3000px) {
   #video {
     margin-top: 10%;
@@ -89,7 +183,7 @@ h2 {
   }
 
   .events {
-    font-family: Roboto, sans-serif;
+    font-family: "Noto Serif JP", serif;
     width: 15%;
     height: auto;
     border-radius: 5px;
@@ -117,189 +211,294 @@ h2 {
   }
 }
 
-/*Forside css css----------------------------------------------------*/
+/*Forside css  default----------------------------------------------------*/
 
-@media only screen and (min-width: 768px) and (max-width: 1650px) {
+/*media querys----------------------------------------------------*/
+@media only screen and (min-width: 0px) and (max-width: 699px) {
+  #leftside {
+    margin-top: 0%;
+    margin-left: 0;
+    width: 100%;
+    z-index: 2;
+    position: relative;
+    background-color: #3e196a;
+    height: 50vh;
+  }
+
+  #rightside {
+    z-index: 2;
+
+    padding: 0%;
+    position: relative;
+    background-image: url(/images/forsideprøve.jpg);
+    background-size: cover;
+    height: 200px;
+    transform: translateY(-500px);
+    margin-left: 25%;
+    width: 100%;
+  }
+
+  .navigation {
+    visibility: hidden;
+  }
+
+  .toptext1 {
+    transform: translateY(0px);
+    margin: 0%;
+    font-size: 30px;
+    width: 100%;
+  }
+  .toptext2 {
+    transform: translateY(0x);
+    margin-top: 0%;
+    font-size: 15px;
+    width: 100%;
+  }
+
+  .containerinsta {
+    transform: translateY(-50px);
+    opacity: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-flow: row wrap;
+  }
+  #bodyindeing2 {
+    display: inline-block;
+  }
+
+  #bodyindeling1 {
+    display: inline-block;
+    transform: translateY(-200px);
+  }
+
+  /*knapper-------------------------------*/
+  .buttontop {
+    background: none;
+    border: 1px solid #ffffff;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 26px;
+
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffffff;
+    font-family: "Noto Serif JP", serif;
+    transform: translateY(40vh);
+    margin-left: 5%;
+    position: relative;
+    z-index: 3;
+  }
+  .buttontop:hover {
+    border: 1px solid #faf9f9;
+  }
+  .buttontop:active {
+    position: relative;
+    top: 1px;
+  }
+
+  .produkt {
+    overflow: hidden;
+    background: none;
+    transition: all 0.5s ease;
+    /* transistion tilbage til alminde størrelse */
+    padding: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    flex-flow: wrap;
+  }
+
+  .produktcard_image {
+    width: 50%; /* for at være sikker på at billede scaler korrket med boxen*/
+    height: auto;
+    border: 5px solid #3c226b;
+    border-radius: 4px;
+  }
+  .produkt_text {
+    text-align: center;
+    font-family: "Noto Serif JP", serif;
+    padding: 5%;
+    width: 50%;
+    padding-top: 0%;
+  }
+  .produkt_text > h2 {
+    color: #3c226b;
+  }
+  .containerprodukt {
+    transform: translateY(0%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    flex-flow: wrap;
+  }
+  .buttonprodukt {
+    font-size: 26px;
+    padding: 6px 24px;
+    transform: translateY(2vh);
+    margin-left: 0%;
+    z-index: 3;
+  }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1650px) {
   #leftside {
     transform: translateY(-40%);
-    width: 60%;
-    padding-left: 1.2%;
-    margin: -1%;
-  }
-}
-
-@media only screen and (min-width: 1950px) and (max-width: 3000px) {
-  #leftside {
-    width: 47%;
-    z-index: 2;
-    transform: translateY(-36%);
+    width: 61.2%;
+    margin-top: -1%;
+    z-index: 1;
     position: relative;
-    margin-left: 10%;
+    background-color: #3e196a;
+    height: 100vh;
+    margin-left: -1%;
+  }
+
+  #rightside {
+    height: 500px;
+    transform: translateY(-180%);
+    margin-left: 40%;
+    width: 60%;
+    z-index: 2;
+    background-color: #5c2f92;
+    background-color: rgba(128, 255, 0, 0.226);
+    padding: 0%;
+    position: relative;
+    background-image: url(/images/forsideprøve.jpg);
+    background-size: cover;
+  }
+
+  .containerinsta {
+    transform: translateY(-100%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-flow: row wrap;
+  }
+
+  .instatext {
+    transform: translateY(-400px);
+    margin-left: 40%;
+  }
+
+  .produkt {
+    width: 20%;
   }
 }
 
-#leftside {
-  background-color: #3e196a;
-  height: 100vh;
-}
+@media only screen and (min-width: 1651px) and (max-width: 3000px) {
+  #bodyindeing2 {
+    display: inline-block;
+  }
 
-#rightside {
-  z-index: 2;
-  background-color: #5c2f92;
-  background-color: rgba(128, 255, 0, 0.226);
-  height: 500px;
-  transform: translateY(-180%);
-  margin-left: 41%;
-  padding: 0%;
-  position: relative;
-  background-image: url(/images/forsideprøve.jpg);
-  background-size: cover;
-  width: 60%;
-}
+  #bodyindeling1 {
+    display: inline-block;
+  }
 
-.buttontop {
-  background: none;
-  border: 1px solid #ffffff;
-  display: inline-block;
-  cursor: pointer;
-  color: #ffffff;
-  font-family: Arial;
-  font-size: 26px;
+  #leftside {
+    transform: translateY(-40%);
+    width: 1165px;
+    margin-top: -1%;
+    z-index: 1;
+    position: relative;
+    background-color: #3e196a;
+    height: 100vh;
+    margin-left: -1%;
+  }
 
-  padding: 6px 24px;
-  text-decoration: none;
-  text-shadow: 0px 1px 0px #ffffff;
-  font-family: Arial, Helvetica, sans-serif;
-  transform: translateY(55vh);
-  margin-left: 15%;
-  position: relative;
-  z-index: 3;
-}
-.buttontop:hover {
-  border: 1px solid #faf9f9;
-}
-.buttontop:active {
-  position: relative;
-  top: 1px;
-}
-.textwarpper {
-  margin-left: 15%;
-  transform: translatey(25vh);
-  width: 40%;
-  z-index: 3;
-  position: relative;
-}
-.textwarpper > h1,
-h2 {
-  color: whitesmoke;
-  font-family: Arial, Helvetica, sans-serif;
-}
-/*instagram forside-----------------------------------------------*/
-.insta {
-  font-family: Arial, Helvetica, sans-serif;
-  width: 20%;
-  border-radius: 5px;
-  box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06),
-    1px 3px 8px rgba(39, 44, 49, 0.03);
-  overflow: hidden; /* otherwise header image won't respect rounded corners */
-  background: none;
-  transition: all 0.5s ease;
-  /* back to normal */
-}
-.insta:hover {
-  transform: translate3D(0, -1px, 0) scale(1.2); /* move up slightly and zoom in */
-  box-shadow: 8px 28px 50px rgba(39, 44, 49, 0.07),
-    1px 6px 12px rgba(39, 44, 49, 0.04);
-  transition: all 0.4s ease; /* zoom in */
-  cursor: pointer;
-}
-.instacard_image {
-  width: 100%; /* forces image to maintain its aspect ratio; otherwise image stretches vertically */
-  padding-left: 0%;
-  margin: 10%;
-  height: 30vh;
-}
-.instacard_text {
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 0%;
-  width: 100%;
-  padding-top: 0%;
-  text-align: center;
-}
-.instacard_text > h2 {
-  color: #3c226b;
-}
-.containerinsta {
-  transform: translateY(-100%);
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-/*produkt side css----------------------------------------------------*/
+  #rightside {
+    height: 500px;
+    transform: translateY(-1200px);
+    margin-left: 40%;
+    width: 60%;
+    z-index: 2;
+    background-color: #5c2f92;
+    background-color: rgba(128, 255, 0, 0.226);
+    padding: 0%;
+    position: relative;
+    background-image: url(/images/forsideprøve.jpg);
+    background-size: cover;
+  }
 
-.produkter {
-  margin-top: 30%;
-}
+  .containerinsta {
+    transform: translateY(-500px);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-flow: row wrap;
+  }
+  .buttontop {
+    background: none;
+    border: 2px solid #ffffff;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 50px;
 
-.produkt {
-  font-family: Arial, Helvetica, sans-serif;
-  width: 20%;
-  border-radius: 5px;
-  box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06),
-    1px 3px 8px rgba(39, 44, 49, 0.03);
-  overflow: hidden;
-  background: none;
-  transition: all 0.5s ease;
-  /* transistion tilbage til alminde størrelse */
-  padding: 2%;
-}
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    transform: translateY(55vh);
+    margin-left: 15%;
+    position: relative;
+    z-index: 3;
+  }
+  .buttontop:hover {
+    border: 1px solid #faf9f9;
+  }
+  .buttontop:active {
+    position: relative;
+    top: 1px;
+  }
 
-.produktcard_image {
-  width: 100%; /* for at være sikker på at billede scaler korrket med boxen*/
-  height: 50vh;
-  border: 5px solid #3c226b;
-  border-radius: 4px;
-}
-.produkt_text {
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 0%;
-  width: 100%;
-  padding-top: 0%;
-}
-.produkt_text > h2 {
-  color: #3c226b;
-}
-.containerprodukt {
-  transform: translateY(-100%);
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.buttonprodukt {
-  background: none;
-  border: 1px solid #3c226b;
-  display: inline-block;
-  cursor: pointer;
-  color: #3c226b;
-  font-family: Arial;
-  font-size: 26px;
-  padding: 6px 24px;
-  text-decoration: none;
-  text-shadow: 0px 1px 0px #ffffff;
-  font-family: Arial, Helvetica, sans-serif;
-  transform: translateY(2vh);
-  margin-left: 0%;
-  position: relative;
-  z-index: 3;
-}
-.buttontop:hover {
-  border: 1px solid #faf9f9;
-}
-.buttontop:active {
-  position: relative;
-  top: 1px;
+  .produkt {
+    background: none;
+    transition: all 0.5s ease;
+    /* transistion tilbage til alminde størrelse */
+    padding: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 20%;
+    flex-flow: wrap;
+  }
+
+  .produktcard_image {
+    width: 60%; /* for at være sikker på at billede scaler korrket med boxen*/
+    height: auto;
+    border: 5px solid #3c226b;
+    border-radius: 4px;
+  }
+  .produkt_text {
+    text-align: center;
+    font-family: "Noto Serif JP", serif;
+    padding: 5%;
+    width: 60%;
+    padding-top: 0%;
+  }
+  .produkt_text > h2 {
+    color: #3c226b;
+  }
+  .containerprodukt {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    flex-flow: wrap;
+  }
+  .buttonprodukt {
+    font-size: 26px;
+    padding: 6px 24px;
+    transform: translateY(2vh);
+    margin-left: 0%;
+    z-index: 3;
+  }
 }
 /*footer------------------------------------------------------------------*/
 
@@ -316,7 +515,7 @@ h2 {
   box-sizing: border-box;
   width: 100%;
   text-align: left;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Noto Serif JP", serif;
   padding: 50px 50px 60px 50px;
   margin-top: 80px;
   position: relative;
@@ -328,7 +527,7 @@ h2 {
 .footer .footer-right {
   display: inline-block;
   vertical-align: top;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Noto Serif JP", serif;
 }
 
 /* Footer left */
