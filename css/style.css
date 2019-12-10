@@ -1,5 +1,29 @@
 /*dfaults-- globals-------------------------------*/
 
+.events:hover {
+  transform: translate3D(0, -1px, 0) scale(1.1); /* move up slightly and zoom in */
+  transition: all 0.4s ease; /* zoom in */
+  cursor: pointer;
+}
+
+.card_image {
+  width: 100%; /* forces image to maintain its aspect ratio; otherwise image stretches vertically */
+  max-height: 160px;
+  min-width: 40%;
+}
+
+.card_text,
+.card_text h2,
+.instatext {
+  width: 100%;
+  color: #3c226b;
+  font-family: "Noto Serif JP", serif;
+}
+
+h2 {
+  margin: 8px 0px 12px 0px;
+}
+
 .buttonprodukt {
   background: none;
   border: 1px solid #3c226b;
@@ -75,7 +99,24 @@ body {
 
 /*event side css----------------------------------------------------*/
 
-@media only screen and (min-width: 500px) and (max-width: 1650px) {
+@media only screen and (min-width: 0px) and (max-width: 360px) {
+  #video {
+    margin-left: -5%;
+    height: 160px;
+    padding: 5%;
+  }
+
+  .card_text,
+  .card_text h2,
+  .instatext {
+    width: 100%;
+    margin: 5%;
+    color: #3c226b;
+    font-family: "Noto Serif JP", serif;
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 2000px) {
   #video {
     margin-top: 5%;
     margin-left: 2%;
@@ -86,6 +127,9 @@ body {
     padding: 1%;
   }
 
+  .card_text {
+    padding: 2%;
+  }
   .container {
     margin-top: -43%;
     transform: translateY(-200%);
@@ -119,13 +163,13 @@ body {
   }
   .produkt_text {
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
     padding: 5%;
     width: 100%;
     padding-top: 0%;
   }
   .produkt_text > h2 {
     color: #3c226b;
+    font-family: "Noto Serif JP", serif;
   }
   .containerprodukt {
     transform: translateY(0%);
@@ -144,77 +188,10 @@ body {
   }
 }
 
-.events:hover {
-  transform: translate3D(0, -1px, 0) scale(20.03); /* move up slightly and zoom in */
-  transition: all 0.4s ease; /* zoom in */
-  cursor: pointer;
-}
-
-.card_image {
-  width: 100%; /* forces image to maintain its aspect ratio; otherwise image stretches vertically */
-  max-height: 160px;
-  min-width: 40%;
-}
-
-.card_text,
-.card_text h2,
-.instatext {
-  width: 100%;
-  padding-top: 0%;
-  color: #3c226b;
-  font-family: "Noto Serif JP", serif;
-}
-
-h2 {
-  margin: 8px 0px 12px 0px;
-}
-
-/*event side css---------------------------------------------------------------------------------*/
-@media only screen and (min-width: 1950px) and (max-width: 3000px) {
-  #video {
-    margin-top: 10%;
-
-    margin-left: -7%;
-    margin-right: 0%;
-    z-index: 1;
-    width: 100%;
-    height: 700px;
-    position: relative;
-  }
-
-  .events {
-    font-family: "Noto Serif JP", serif;
-    width: 15%;
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06),
-      1px 3px 8px rgba(39, 44, 49, 0.03);
-    background: none;
-    transition: all 0.5s ease; /* back to normal */
-    padding-left: 1%;
-    padding-right: 1%;
-    padding-top: 2%;
-  }
-
-  .container {
-    margin-top: -43%;
-    transform: translateY(-200%);
-    transform: translateX(80%);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 100%;
-    flex-wrap: wrap;
-    position: relative;
-    z-index: 99;
-  }
-}
-
 /*Forside css  default----------------------------------------------------*/
 
 /*media querys----------------------------------------------------*/
-@media only screen and (min-width: 0px) and (max-width: 699px) {
+@media only screen and (min-width: 0px) and (max-width: 700px) {
   #leftside {
     margin-top: 0%;
     margin-left: 0;
@@ -232,9 +209,9 @@ h2 {
     position: relative;
     background-image: url(/images/forsideprøve.jpg);
     background-size: cover;
-    height: 200px;
-    transform: translateY(-500px);
-    margin-left: 25%;
+    height: 100px;
+    transform: translateY(-270px);
+    margin-left: 48%;
     width: 100%;
   }
 
@@ -253,6 +230,12 @@ h2 {
     margin-top: 0%;
     font-size: 15px;
     width: 100%;
+  }
+
+  .instatext {
+    transform: translateY(-40px);
+    text-align: center;
+    margin-left: 0%;
   }
 
   .containerinsta {
@@ -287,7 +270,7 @@ h2 {
     text-decoration: none;
     text-shadow: 0px 1px 0px #ffffff;
     font-family: "Noto Serif JP", serif;
-    transform: translateY(40vh);
+    transform: translateY(60vh);
     margin-left: 5%;
     position: relative;
     z-index: 3;
@@ -348,9 +331,9 @@ h2 {
 
 @media only screen and (min-width: 700px) and (max-width: 1650px) {
   #leftside {
-    transform: translateY(-40%);
+    transform: translateY(-45%);
     width: 61.2%;
-    margin-top: -1%;
+    margin-top: -5%;
     z-index: 1;
     position: relative;
     background-color: #3e196a;
@@ -388,9 +371,42 @@ h2 {
   .produkt {
     width: 20%;
   }
+  .buttontop {
+    background: none;
+    border: 1px solid #ffffff;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 26px;
+
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffffff;
+    font-family: "Noto Serif JP", serif;
+    transform: translateY(60vh);
+    margin-left: 15%;
+    position: relative;
+    z-index: 3;
+  }
+  .buttontop:hover {
+    border: 1px solid #faf9f9;
+  }
+  .buttontop:active {
+    position: relative;
+    top: 1px;
+  }
 }
 
 @media only screen and (min-width: 1651px) and (max-width: 3000px) {
+  .toptext1 {
+    transform: translateY(-20px);
+    font-size: 50px;
+  }
+  .toptext2 {
+    transform: translateY(-20px);
+    font-size: 50px;
+  }
   #bodyindeing2 {
     display: inline-block;
   }
@@ -411,10 +427,10 @@ h2 {
   }
 
   #rightside {
-    height: 500px;
+    height: 600px;
     transform: translateY(-1200px);
-    margin-left: 40%;
-    width: 60%;
+    margin-left: 60%;
+    width: 100%;
     z-index: 2;
     background-color: #5c2f92;
     background-color: rgba(128, 255, 0, 0.226);
