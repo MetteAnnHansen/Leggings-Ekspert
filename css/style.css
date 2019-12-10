@@ -400,12 +400,12 @@ body {
 
 @media only screen and (min-width: 1651px) and (max-width: 3000px) {
   .toptext1 {
-    transform: translateY(-20px);
-    font-size: 50px;
+    transform: translateY(-100px);
+    font-size: 40px;
   }
   .toptext2 {
-    transform: translateY(-20px);
-    font-size: 50px;
+    transform: translateY(-350px);
+    font-size: 40px;
   }
   #bodyindeing2 {
     display: inline-block;
@@ -416,9 +416,9 @@ body {
   }
 
   #leftside {
-    transform: translateY(-40%);
-    width: 1165px;
-    margin-top: -1%;
+    transform: translateY(-50%);
+    width: 115.7%;
+    margin-top: -20%;
     z-index: 1;
     position: relative;
     background-color: #3e196a;
@@ -429,7 +429,7 @@ body {
   #rightside {
     height: 600px;
     transform: translateY(-1200px);
-    margin-left: 60%;
+    margin-left: 70%;
     width: 100%;
     z-index: 2;
     background-color: #5c2f92;
@@ -439,13 +439,18 @@ body {
     background-image: url(/images/forsideprøve.jpg);
     background-size: cover;
   }
-
+.instatext{
+  transform: translateY(-500px);
+  margin-left: 80%;
+}
   .containerinsta {
     transform: translateY(-500px);
     display: flex;
     flex-direction: row;
     justify-content: center;
-    flex-flow: row wrap;
+    flex-flow: row;
+    width: 100%;
+    margin-left: 50%;
   }
   .buttontop {
     background: none;
@@ -460,7 +465,7 @@ body {
     text-decoration: none;
     text-shadow: 0px 1px 0px #ffffff;
     font-family: Arial, Helvetica, sans-serif;
-    transform: translateY(55vh);
+    transform: translateY(35vh);
     margin-left: 15%;
     position: relative;
     z-index: 3;
