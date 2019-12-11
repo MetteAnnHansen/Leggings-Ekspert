@@ -1,5 +1,3 @@
-///////////------------------ vi går igennem odmmen via vores jquery selecter på elementes id og ændre src tagget i htmlen, for at skifte video dette sker også igennem dommen
-
 $(document).ready(function() {
   $("#yoga1").click(function() {
     $("#video").html(
@@ -9,7 +7,7 @@ $(document).ready(function() {
     $("body").css("background-color", "white");
   });
 });
-///////////------------------ Det samme her
+
 $(document).ready(function() {
   $("#yoga2").click(function() {
     $("#video").html(
@@ -18,7 +16,7 @@ $(document).ready(function() {
     video.load();
     $("body").css("background-color", "white");
   });
-}); ///////////------------------
+});
 
 $(document).ready(function() {
   $("#yoga3").click(function() {
@@ -29,7 +27,7 @@ $(document).ready(function() {
     $("body").css("background-color", "rgba(128, 255, 0, 0.226)");
   });
 });
-///////////------------------
+
 $(document).ready(function() {
   $("#beloud").click(function() {
     $("#video").html(
@@ -40,24 +38,24 @@ $(document).ready(function() {
   });
 });
 
-///////////--------------------------------------------------------fade in puligin at
+///////////--------------------------------------------------------fad in puligin at https://stackoverflow.com/questions/26694385/fade-in-on-scroll-down-fade-out-on-scroll-up-based-on-element-position-in-win
 
 $(window).on("load", function() {
   $(window)
     .scroll(function() {
       var windowBottom = $(this).scrollTop() + $(this).innerHeight();
       $(".fade").each(function() {
-        /* Her ser vi hvor objectet befinder sig på siden */
+        /* Check the location of each desired element */
         var objectBottom = $(this).offset().top + $(this).outerHeight();
 
-        /* hvis elementer er i "view" så toggler vi fade classen via dommen og ind i css */
+        /* If the element is completely within bounds of the window, fade it in */
         if (objectBottom < windowBottom) {
-          //Her øger vi langsomt opaciteten på css classen i css( når vi scroller ned)
+          //object comes into view (scrolling down)
           if ($(this).css("opacity") == 0) {
             $(this).fadeTo(700, 1);
           }
         } else {
-          //modsat fjerner vi den langsomt igen når der scrolles op
+          //object goes out of view (scrolling up)
           if ($(this).css("opacity") == 1) {
             $(this).fadeTo(300, 0);
           }
@@ -66,25 +64,3 @@ $(window).on("load", function() {
     })
     .scroll(); //invoke scroll-handler on page-load
 });
-
-var slideimages = new Array(); // array for at preload i dommen
-slideimages[0] = new Image(); // vi laver en instanse til hvert billede så det kan hentes via src
-slideimages[0].src = "../images/post_1.jpg"; // vi sætter sorce til arrayet
-slideimages[1] = new Image();
-slideimages[1].src = "../images/post_5.jpg";
-slideimages[2] = new Image();
-slideimages[2].src = "../images/post_2.jpg";
-
-// i incrementer igennem som variable det vil sige at den stiger med 1
-var i = 0;
-
-function slideit() {
-  if (!document.images) return;
-  document.getElementById("slide").src = slideimages[i].src;
-  if (i < 2) i++;
-  else i = 0;
-  //call function "slideit()"  her har vi et delay på hvornår billedet skiftes i millisekunder
-  setTimeout("slideit()", 5000);
-}
-
-slideit();
