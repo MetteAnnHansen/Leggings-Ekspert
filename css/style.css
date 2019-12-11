@@ -1,5 +1,10 @@
 /*dfaults-- globals-------------------------------*/
 
+body {
+  overflow-x: hidden;
+  background-color: rgb(255, 255, 255);
+}
+
 .events:hover {
   transform: translate3D(0, -1px, 0) scale(1.1); /* move up slightly and zoom in */
   transition: all 0.4s ease; /* zoom in */
@@ -55,6 +60,23 @@ h2 {
   font-family: "Noto Serif JP", serif;
 }
 
+.produkt_text,
+.produkt_text > h2 {
+  color: #3c226b;
+  font-family: "Noto Serif JP", serif;
+}
+
+.produktcard_image {
+  border: 5px solid #3c226b;
+  border-radius: 4px;
+}
+
+#leftside {
+  background-color: #3e196a;
+}
+
+/*dfaults-- globals-------------------------------*/
+
 /*instagram forside-----------------------------------------------*/
 .insta {
   overflow: hidden; /* otherwise header image won't respect rounded corners */
@@ -62,18 +84,13 @@ h2 {
   transition: all 0.5s ease;
   box-sizing: border-box;
   height: 300px;
-  width: 300px;
+  width: 250px;
   /* back to normal */
 }
 .insta:hover {
-  transform: translate3D(0, 1px, 0) scale(1.1); /* move up slightly and zoom in */
+  transform: translate3D(0, 0px, 0) scale(1.1); /* move up slightly and zoom in */
   transition: all 0.4s ease; /* zoom in */
   cursor: pointer;
-}
-
-body {
-  overflow-x: hidden;
-  background-color: rgb(255, 255, 255);
 }
 
 .navigation {
@@ -97,7 +114,33 @@ body {
   flex-direction: column;
 }
 
-/*event side css----------------------------------------------------*/
+.buttontop {
+  background: none;
+  border: 1px solid #ffffff;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffffff;
+  font-family: "Noto Serif JP", serif;
+  position: relative;
+  z-index: 3;
+}
+.buttontop:hover {
+  border: 1px solid #faf9f9;
+}
+.buttontop:active {
+  position: relative;
+  top: 1px;
+}
+
+.produktcard_image {
+  border: 5px solid #3c226b;
+  border-radius: 4px;
+}
+
+/*event side css og media querys----------------------------------------------------*/
 
 @media only screen and (min-width: 0px) and (max-width: 360px) {
   #video {
@@ -105,18 +148,39 @@ body {
     height: 160px;
     padding: 5%;
   }
+}
 
-  .card_text,
-  .card_text h2,
-  .instatext {
-    width: 100%;
-    margin: 5%;
-    color: #3c226b;
-    font-family: "Noto Serif JP", serif;
+@media only screen and (min-width: 361px) and (max-width: 850px) {
+  #video {
+    margin-top: 5%;
+    margin-left: 5%;
+    height: 600px;
+    width: 90%;
+  }
+  .events {
+    width: 30%;
+    padding: 1%;
+  }
+
+  .card_text {
+    padding: 2%;
+  }
+  .container {
+    margin-top: 0%;
+    transform: translateY(50%);
+    transform: translateX(0%);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 100%;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 99;
   }
 }
 
-@media only screen and (min-width: 360px) and (max-width: 2000px) {
+@media only screen and (min-width: 850px) and (max-width: 2000px) {
   #video {
     margin-top: 5%;
     margin-left: 2%;
@@ -144,6 +208,7 @@ body {
     z-index: 99;
   }
 
+  /*Forside css ---------------------------------------------------*/
   /*produkter-------------------------------*/
   .produkt {
     width: 100%;
@@ -158,8 +223,6 @@ body {
   .produktcard_image {
     width: 100%; /* for at være sikker på at billede scaler korrket med boxen*/
     height: auto;
-    border: 5px solid #3c226b;
-    border-radius: 4px;
   }
   .produkt_text {
     text-align: center;
@@ -167,10 +230,7 @@ body {
     width: 100%;
     padding-top: 0%;
   }
-  .produkt_text > h2 {
-    color: #3c226b;
-    font-family: "Noto Serif JP", serif;
-  }
+
   .containerprodukt {
     transform: translateY(0%);
     display: flex;
@@ -194,12 +254,11 @@ body {
 @media only screen and (min-width: 0px) and (max-width: 700px) {
   #leftside {
     margin-top: 0%;
-    margin-left: 0;
-    width: 100%;
+    margin-left: -2%;
+    width: 110%;
     z-index: 2;
     position: relative;
-    background-color: #3e196a;
-    height: 50vh;
+    height: 90vh;
   }
 
   #rightside {
@@ -209,10 +268,10 @@ body {
     position: relative;
     background-image: url(/images/forsideprøve.jpg);
     background-size: cover;
-    height: 100px;
-    transform: translateY(-270px);
-    margin-left: 48%;
-    width: 100%;
+    height: 200px;
+    transform: translateY(-80vh);
+    margin-left: 15%;
+    width: 90%;
   }
 
   .navigation {
@@ -220,13 +279,13 @@ body {
   }
 
   .toptext1 {
-    transform: translateY(0px);
+    transform: translateY(42vh);
     margin: 0%;
     font-size: 30px;
     width: 100%;
   }
   .toptext2 {
-    transform: translateY(0x);
+    transform: translateY(42vh);
     margin-top: 0%;
     font-size: 15px;
     width: 100%;
@@ -258,29 +317,15 @@ body {
 
   /*knapper-------------------------------*/
   .buttontop {
-    background: none;
-    border: 1px solid #ffffff;
     display: inline-block;
     cursor: pointer;
-    color: #ffffff;
     font-family: Arial;
     font-size: 26px;
-
     padding: 6px 24px;
-    text-decoration: none;
-    text-shadow: 0px 1px 0px #ffffff;
-    font-family: "Noto Serif JP", serif;
-    transform: translateY(60vh);
-    margin-left: 5%;
+    transform: translateY(100vh);
+    margin-left: 13%;
     position: relative;
     z-index: 3;
-  }
-  .buttontop:hover {
-    border: 1px solid #faf9f9;
-  }
-  .buttontop:active {
-    position: relative;
-    top: 1px;
   }
 
   .produkt {
@@ -299,8 +344,6 @@ body {
   .produktcard_image {
     width: 50%; /* for at være sikker på at billede scaler korrket med boxen*/
     height: auto;
-    border: 5px solid #3c226b;
-    border-radius: 4px;
   }
   .produkt_text {
     text-align: center;
@@ -308,9 +351,6 @@ body {
     padding: 5%;
     width: 50%;
     padding-top: 0%;
-  }
-  .produkt_text > h2 {
-    color: #3c226b;
   }
   .containerprodukt {
     transform: translateY(0%);
@@ -322,7 +362,6 @@ body {
   }
   .buttonprodukt {
     font-size: 26px;
-    padding: 6px 24px;
     transform: translateY(2vh);
     margin-left: 0%;
     z-index: 3;
@@ -336,7 +375,6 @@ body {
     margin-top: -5%;
     z-index: 1;
     position: relative;
-    background-color: #3e196a;
     height: 100vh;
     margin-left: -1%;
   }
@@ -347,8 +385,6 @@ body {
     margin-left: 40%;
     width: 60%;
     z-index: 2;
-    background-color: #5c2f92;
-    background-color: rgba(128, 255, 0, 0.226);
     padding: 0%;
     position: relative;
     background-image: url(/images/forsideprøve.jpg);
@@ -372,29 +408,14 @@ body {
     width: 20%;
   }
   .buttontop {
-    background: none;
-    border: 1px solid #ffffff;
-    display: inline-block;
-    cursor: pointer;
-    color: #ffffff;
-    font-family: Arial;
     font-size: 26px;
-
     padding: 6px 24px;
     text-decoration: none;
     text-shadow: 0px 1px 0px #ffffff;
-    font-family: "Noto Serif JP", serif;
     transform: translateY(60vh);
     margin-left: 15%;
     position: relative;
     z-index: 3;
-  }
-  .buttontop:hover {
-    border: 1px solid #faf9f9;
-  }
-  .buttontop:active {
-    position: relative;
-    top: 1px;
   }
 }
 
@@ -423,8 +444,12 @@ body {
     margin-top: -20%;
     z-index: 1;
     position: relative;
+<<<<<<< HEAD
     background-color: #3e196a;
     height: 130vh;
+=======
+    height: 100vh;
+>>>>>>> master
     margin-left: -1%;
 
   }
@@ -435,12 +460,8 @@ body {
     margin-left: 75%;
     width: 110%;
     z-index: 2;
-    background-color: #5c2f92;
-    background-color: rgba(128, 255, 0, 0.226);
-    padding: 0%;
     position: relative;
     background-image: url(/images/forsideprøve.jpg);
-    background-size: cover;
   }
 .instatext{
   transform: translateY(-500px);
@@ -456,29 +477,20 @@ body {
     margin-left: 50%;
   }
   .buttontop {
-    background: none;
-    border: 2px solid #ffffff;
-    display: inline-block;
-    cursor: pointer;
-    color: #ffffff;
-    font-family: Arial;
     font-size: 50px;
+<<<<<<< HEAD
 
     padding: 6px 24px;
     text-decoration: none;
     text-shadow: 0px 1px 0px #ffffff;
     font-family: Arial, Helvetica, sans-serif;
     transform: translateY(70vh);
+=======
+    transform: translateY(55vh);
+>>>>>>> master
     margin-left: 15%;
     position: relative;
     z-index: 3;
-  }
-  .buttontop:hover {
-    border: 1px solid #faf9f9;
-  }
-  .buttontop:active {
-    position: relative;
-    top: 1px;
   }
 
   .produkt {
@@ -496,19 +508,14 @@ body {
   .produktcard_image {
     width: 60%; /* for at være sikker på at billede scaler korrket med boxen*/
     height: auto;
-    border: 5px solid #3c226b;
-    border-radius: 4px;
   }
   .produkt_text {
     text-align: center;
-    font-family: "Noto Serif JP", serif;
     padding: 5%;
     width: 60%;
     padding-top: 0%;
   }
-  .produkt_text > h2 {
-    color: #3c226b;
-  }
+
   .containerprodukt {
     display: flex;
     flex-direction: row;
@@ -518,12 +525,121 @@ body {
   }
   .buttonprodukt {
     font-size: 26px;
-    padding: 6px 24px;
     transform: translateY(2vh);
     margin-left: 0%;
     z-index: 3;
   }
 }
+
+/*produktleggins side css og media querys----------------------------------------------------*/
+.backgroundleggings {
+  width: 80%;
+  margin-bottom: -10%;
+}
+
+.containerleggings {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 30%;
+  flex-flow: wrap;
+  margin-left: 52%;
+  transform: translateY(-78vh);
+  transform: translate();
+  margin-bottom: -70%;
+}
+
+.info {
+  background: none;
+  padding: 2%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-flow: nowrap;
+}
+
+.leggings_image {
+  width: 50%; /* for at være sikker på at billede scaler korrket med boxen*/
+}
+.leggings_image img {
+  width: 100%;
+}
+.hero {
+  width: 100%;
+  height: 600px;
+}
+.card_text {
+  width: 100%;
+}
+.card_text h2 {
+  font-size: 20px;
+  width: 100%;
+  text-align: left;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 700px) {
+  .backgroundleggings {
+    width: 150%;
+    margin-left: -10%;
+  }
+
+  .containerleggings {
+    width: 100%;
+    margin-left: 0%;
+    transform: translateY(10vh);
+    transform: translate();
+    margin-bottom: 2%;
+    display: inline-block;
+  }
+
+  .info {
+    background: none;
+    padding: 2%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-flow: nowrap;
+  }
+
+  .leggings_image {
+    width: 50%; /* for at være sikker på at billede scaler korrket med boxen*/
+  }
+  .leggings_image img {
+    width: 100%;
+  }
+  .hero {
+    width: 100%;
+    height: 600px;
+  }
+  .card_text {
+    width: 100%;
+  }
+  .card_text h2 {
+    padding-left: 2%;
+    width: 92%;
+    font-size: 16px;
+    text-align: left;
+  }
+
+  footer {
+    transform: translateY(40vh);
+  }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1250px) {
+  .containerleggings {
+    transform: translateY(-62vh);
+  }
+  .backgroundleggings {
+    width: 90%;
+    margin-left: -10%;
+  }
+
+  footer {
+    transform: translateY(-26vh);
+  }
+}
+
 /*footer------------------------------------------------------------------*/
 
 @media (max-height: 400px) {
@@ -554,7 +670,7 @@ body {
   font-family: "Noto Serif JP", serif;
 }
 
-/* Footer left */
+/* Footer left------------------------------------------------------------------ */
 .footer .footer-left {
   width: 30%;
 }
@@ -562,7 +678,7 @@ body {
   color: #ffffff;
   margin: 0;
 }
-/* The company logo */
+/*  logo ------------------------------------------*/
 .footer .footer-left img {
   width: 55%;
 }
@@ -570,7 +686,7 @@ body {
 .footer h3 span {
   color: #ffffff;
 }
-/* Footer links */
+/* Footer links -----------------------------------------------*/
 .footer.footer-links {
   color: #ffffff;
   margin: 20px 0 12px;
@@ -625,7 +741,7 @@ body {
   color: #ffffff;
   text-decoration: none;
 }
-/* Footer Right */
+/* Footer Right------------------------------------ */
 .footer .footer-right {
   width: 30%;
 }
@@ -670,12 +786,8 @@ body {
 
 /* foooticons*/
 
-#fafa-facebook {
-  background-image: url(/images/yogga.jpg);
-}
+/* responsive footer her */
 
-/* Here is the code for Responsive Footer */
-/* You can remove below code if you don't want Footer to be responsive */
 @media (max-width: 880px) {
   .footer .footer-left,
   .footer .footer-center,
