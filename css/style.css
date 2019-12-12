@@ -66,11 +66,6 @@ h2 {
   font-family: "Noto Serif JP", serif;
 }
 
-.produktcard_image {
-  border: 5px solid #3c226b;
-  border-radius: 4px;
-}
-
 #leftside {
   background-color: #3e196a;
 }
@@ -131,11 +126,6 @@ h2 {
 .buttontop:active {
   position: relative;
   top: 1px;
-}
-
-.produktcard_image {
-  border: 5px solid #3c226b;
-  border-radius: 4px;
 }
 
 /*defaults-- globals-------------------------------*/
@@ -279,7 +269,7 @@ h2 {
 
     padding: 0%;
     position: relative;
-    background-image: url(/images/forsideprøve.jpg);
+    background-image: url(/images/forside_orange.png);
     background-size: cover;
     height: 200px;
     transform: translateY(-80vh);
@@ -400,7 +390,7 @@ h2 {
     z-index: 2;
     padding: 0%;
     position: relative;
-    background-image: url(/images/forsideprøve.jpg);
+    background-image: url(/images/forside_orange.png);
     background-size: cover;
   }
 
@@ -467,7 +457,7 @@ h2 {
     width: 100%;
     z-index: 2;
     position: relative;
-    background-image: url(/images/forsideprøve.jpg);
+    background-image: url(/images/forside_orange.png);
   }
 
   .containerinsta {
