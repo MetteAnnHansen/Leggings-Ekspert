@@ -39,7 +39,6 @@ $(document).ready(function() {
     $("body").css("background-color", "black");
   });
 });
-
 ///////////--------------------------------------------------------fade in puligin at
 
 $(window).on("load", function() {
@@ -66,7 +65,6 @@ $(window).on("load", function() {
     })
     .scroll(); //invoke scroll-handler on page-load
 });
-
 var slideimages = new Array(); // array for at preload i dommen
 slideimages[0] = new Image(); // vi laver en instanse til hvert billede så det kan hentes via src
 slideimages[0].src = "../images/post_1.jpg"; // vi sætter sorce til arrayet
@@ -88,3 +86,19 @@ function slideit() {
 }
 
 slideit();
+/////burger js
+
+$(document).ready(function() {
+  $(".menu-burger").hide();
+  $("#nav-burger").click(function() {
+    $(this).toggleClass("open");
+    $(".menu-burger").slideToggle("slow");
+  });
+});
+
+$(".menu-burger li ").on("click", function() {
+  $(".menu-burger").hide();
+  $("#nav-burger").click(function() {
+    $(this).toggleClass("open");
+  });
+});

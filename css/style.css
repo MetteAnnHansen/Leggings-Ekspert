@@ -6,9 +6,14 @@ body {
 }
 
 .events:hover {
-  transform: translate3D(0, -1px, 0) scale(1.1); /* move up slightly and zoom in */
+  transform: translate3D(0, 0px, 0) scale(1.1); /* move up slightly and zoom in */
   transition: all 0.4s ease; /* zoom in */
   cursor: pointer;
+}
+
+.produktcard_image:hover {
+  transform: translate3D(0, 0px, 0) scale(1.05);
+  transition: all 0.4s ease;
 }
 
 .card_image {
@@ -17,10 +22,10 @@ body {
   min-width: 40%;
 }
 
+.menu-burger,
 .card_text,
 .card_text h2,
 .instatext {
-  width: 100%;
   color: #3c226b;
   font-family: "Noto Serif JP", serif;
 }
@@ -47,18 +52,9 @@ h2 {
   z-index: 3;
 }
 
-.textwarpper {
-  margin-left: 15%;
-  transform: translatey(20vh);
-  width: 20%;
-  z-index: 3;
-  position: relative;
-}
 .textwarpper > h1,
 h2 {
   color: whitesmoke;
-  font-family: "Noto Serif JP", serif;
-  font-size: 30px;
 }
 
 .produkt_text,
@@ -70,6 +66,210 @@ h2 {
 #leftside {
   background-color: #3e196a;
 }
+
+/*globals-- default---------------------------------------------*/
+
+/*navigation-----------------------------------------------*/
+.navigation {
+  background-color: none;
+  margin: 0%;
+  padding: 0%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.logo {
+  width: 60%;
+  background-color: rgb(62, 25, 106);
+}
+
+.logo img {
+  width: 20%;
+}
+
+.nav-illus {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.illustration {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 1%;
+  width: 80%;
+  justify-content: flex-end;
+}
+.some-pics {
+  padding-right: 2%;
+  width: 5%;
+}
+
+.some-pics1 {
+  padding-right: 0%;
+  width: 5%;
+}
+
+.some-pics img {
+  width: 100%;
+}
+
+.some-pics1 img {
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-size: 2em;
+  position: relative;
+  opacity: 0.75;
+  display: inline-block;
+  color: #000000;
+}
+
+.navbar a:hover {
+  opacity: 1;
+  color: #000000;
+  border-bottom: #000000 solid 2px;
+}
+
+.navbar a:active {
+  border-bottom: solid black 2px;
+  text-decoration: none;
+  color: #000000;
+}
+
+/*-----------------------------------------------burger bar--------------------------------------------*/
+
+#nav-burger {
+  width: 60px;
+  height: 45px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  float: right;
+}
+
+#nav-burger span {
+  display: block;
+  position: absolute;
+  height: 6px;
+  width: 100%;
+  background: #000000;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+#nav-burger span:nth-child(1) {
+  top: 0px;
+}
+
+#nav-burger span:nth-child(2) {
+  top: 12px;
+}
+
+#nav-burger span:nth-child(3) {
+  top: 24px;
+}
+
+#nav-burger.open span:nth-child(1) {
+  top: 18px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+#nav-burger.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+#nav-burger.open span:nth-child(3) {
+  top: 18px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+.menu-burger {
+  margin-top: 7%;
+  z-index: 1000000;
+  font-weight: bold;
+  font-size: 15px;
+  width: 300%;
+  background: #ffffff;
+  position: absolute;
+  text-align: center;
+  transform: translate(-60%, 15%);
+}
+.menu-burger ul {
+  padding: 0;
+  list-style-type: none;
+  list-style-image: none;
+  width: 100%;
+}
+.menu-burger li {
+  display: block;
+  padding: 15px 0 15px 0;
+  border-bottom: #dddddd 1px solid;
+}
+.menu-burger li:hover {
+  display: block;
+  background: #ffffff;
+  padding: 15px 0 15px 0;
+  border-bottom: #dddddd 1px solid;
+}
+.menu-burger ul li a {
+  text-decoration: none;
+  margin: 0px;
+  color: #666;
+}
+.menu-burger ul li a:hover {
+  color: #666;
+  text-decoration: none;
+}
+.menu-burger a {
+  text-decoration: none;
+  color: #666;
+}
+.menu-burger a:hover {
+  text-decoration: none;
+  color: #666;
+}
+
+.burger-wrapper {
+  display: hide;
+}
+
+/*navigation-----------------------------------------------*/
 
 /*instagram forside-----------------------------------------------*/
 .insta {
@@ -85,27 +285,6 @@ h2 {
   transform: translate3D(0, 0px, 0) scale(1.1); /* move up slightly and zoom in */
   transition: all 0.4s ease; /* zoom in */
   cursor: pointer;
-}
-
-.navigation {
-  background-color: pink;
-  margin: 0%;
-  padding: 0%;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  z-index: 9;
-}
-
-.logo {
-  width: 70%;
-}
-
-.nav-illus {
-  width: 30%;
-  display: flex;
-  flex-direction: column;
 }
 
 .buttontop {
@@ -136,8 +315,41 @@ h2 {
 @media only screen and (min-width: 0px) and (max-width: 360px) {
   #video {
     margin-left: -5%;
-    height: 160px;
+    height: 200px;
     padding: 5%;
+  }
+
+  video {
+    margin-top: 5%;
+    margin-left: 5%;
+    height: 600px;
+    width: 100%;
+    transform: translateY(100px);
+  }
+
+  #video {
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+  }
+  .events {
+    width: 70%;
+    padding: 1%;
+  }
+
+  .container {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+    transform: translateY(-200px);
+  }
+  .footer {
+    transform: translateY(-200px);
   }
 }
 
@@ -173,7 +385,7 @@ h2 {
 
 @media only screen and (min-width: 850px) and (max-width: 2000px) {
   #video {
-    margin-top: 5%;
+    margin-top: 10%;
     margin-left: 2%;
     height: 600px;
   }
@@ -186,7 +398,7 @@ h2 {
     padding: 2%;
   }
   .container {
-    margin-top: -43%;
+    margin-top: -40.2%;
     transform: translateY(-200%);
     transform: translateX(80%);
 
@@ -196,7 +408,7 @@ h2 {
     max-width: 100%;
     flex-wrap: wrap;
     position: relative;
-    z-index: 99;
+    z-index: 1;
   }
 
   /*Forside css ---------------------------------------------------*/
@@ -256,9 +468,36 @@ h2 {
 
 /*media querys----------------------------------------------------*/
 @media only screen and (min-width: 0px) and (max-width: 700px) {
+  .burger-wrapper {
+    display: show;
+    position: relative;
+    z-index: 99;
+    margin-right: 5%;
+  }
+  #nav-burger {
+    margin-top: -10px;
+    height: 30px;
+    width: 50px;
+  }
+
+  .illustration {
+    display: none;
+  }
+  .navbar {
+    display: none;
+  }
+
+  .logo img {
+    background-color: #3c226b;
+    width: 50%;
+  }
+  .navigation {
+    background-color: #3c226b;
+  }
+
   #leftside {
     margin-top: 0%;
-    margin-left: -2%;
+    margin-left: -3%;
     width: 110%;
     z-index: 2;
     position: relative;
@@ -278,10 +517,13 @@ h2 {
     width: 90%;
   }
 
-  .navigation {
-    visibility: hidden;
+  .textwarpper {
+    margin-left: 15%;
+    transform: translatey(30vh);
+    z-index: 3;
+    position: relative;
+    width: 100%;
   }
-
   .toptext1 {
     transform: translateY(45vh);
     margin: 0%;
@@ -291,7 +533,7 @@ h2 {
   .toptext2 {
     transform: translateY(45vh);
     margin-top: 0%;
-    font-size: 15px;
+    font-size: 30px;
     width: 100%;
   }
 
@@ -299,6 +541,7 @@ h2 {
     transform: translateY(-40px);
     text-align: center;
     margin-left: 0%;
+    width: 100%;
   }
 
   .containerinsta {
@@ -326,7 +569,7 @@ h2 {
     font-family: Arial;
     font-size: 26px;
     padding: 6px 24px;
-    transform: translateY(102vh);
+    transform: translateY(110vh);
     margin-left: 13%;
     position: relative;
     z-index: 3;
@@ -345,8 +588,9 @@ h2 {
     flex-flow: wrap;
   }
 
+  .produkt a,
   .produktcard_image {
-    width: 50%; /* for at være sikker på at billede scaler korrket med boxen*/
+    width: 100%; /* for at være sikker på at billede scaler korrket med boxen*/
     height: auto;
   }
   .produkt_text {
@@ -367,15 +611,26 @@ h2 {
   .buttonprodukt {
     font-size: 26px;
     transform: translateY(2vh);
-    margin-left: 0%;
+    margin-left: -15%;
     z-index: 3;
   }
 }
 
 @media only screen and (min-width: 701px) and (max-width: 1650px) {
+  .burger-wrapper {
+    display: none;
+  }
+
+  .textwarpper {
+    margin-left: 15%;
+    transform: translatey(20vh);
+    z-index: 3;
+    position: relative;
+    width: 20%;
+  }
   #leftside {
     transform: translateY(-45%);
-    width: 61.2%;
+    width: 61.1%;
     margin-top: -5%;
     z-index: 1;
     position: relative;
@@ -385,7 +640,7 @@ h2 {
 
   #rightside {
     height: 550px;
-    transform: translateY(-169%);
+    transform: translateY(-150%);
     margin-left: 40%;
     width: 60%;
     z-index: 2;
@@ -425,6 +680,10 @@ h2 {
   .produkter {
     transform: translatey(-70vh);
     width: 100%;
+  }
+
+  .navigation {
+    background-color: white;
   }
 }
 
@@ -529,8 +788,8 @@ h2 {
 
 /*produktleggins side css og media querys----------------------------------------------------*/
 .backgroundleggings {
+  margin-top: 6%;
   width: 80%;
-  margin-bottom: -10%;
   margin-left: 5%;
 }
 
@@ -541,9 +800,7 @@ h2 {
   width: 30%;
   flex-flow: wrap;
   margin-left: 60%;
-  transform: translateY(-78vh);
-  transform: translate();
-  margin-bottom: -70%;
+  transform: translateY(-90vh);
 }
 
 .info {
@@ -563,7 +820,7 @@ h2 {
 }
 .hero {
   width: 100%;
-  height: 600px;
+  height: 700px;
 }
 .card_text {
   width: 100%;
@@ -586,8 +843,8 @@ h2 {
   font-family: "Noto Serif JP", serif;
   font-size: 28px;
   position: relative;
-  z-index: 3;
-  transform: translate(-140vh, -45vh);
+  z-index: 1;
+  transform: translate(-140vh, -70vh);
 }
 
 @media only screen and (min-width: 0px) and (max-width: 700px) {
@@ -642,6 +899,12 @@ h2 {
 }
 
 @media only screen and (min-width: 700px) and (max-width: 1250px) {
+  .textwarpper {
+    margin-left: 15%;
+    transform: translatey(20vh);
+    z-index: 3;
+    position: relative;
+  }
   .containerleggings {
     transform: translateY(-62vh);
   }
