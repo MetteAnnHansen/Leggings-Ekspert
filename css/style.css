@@ -49,8 +49,8 @@ h2 {
 
 .textwarpper {
   margin-left: 15%;
-  transform: translatey(25vh);
-  width: 40%;
+  transform: translatey(20vh);
+  width: 20%;
   z-index: 3;
   position: relative;
 }
@@ -58,6 +58,7 @@ h2 {
 h2 {
   color: whitesmoke;
   font-family: "Noto Serif JP", serif;
+  font-size: 30px;
 }
 
 .produkt_text,
@@ -224,7 +225,7 @@ h2 {
     transform: translateY(0%);
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     width: 100%;
     flex-flow: wrap;
   }
@@ -371,7 +372,7 @@ h2 {
   }
 }
 
-@media only screen and (min-width: 700px) and (max-width: 1650px) {
+@media only screen and (min-width: 701px) and (max-width: 1650px) {
   #leftside {
     transform: translateY(-45%);
     width: 61.2%;
@@ -383,8 +384,8 @@ h2 {
   }
 
   #rightside {
-    height: 500px;
-    transform: translateY(-180%);
+    height: 550px;
+    transform: translateY(-169%);
     margin-left: 40%;
     width: 60%;
     z-index: 2;
@@ -395,7 +396,7 @@ h2 {
   }
 
   .containerinsta {
-    transform: translateY(-100%);
+    transform: translateY(-140%);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -403,7 +404,7 @@ h2 {
   }
 
   .instatext {
-    transform: translateY(-400px);
+    transform: translateY(-55vh);
     margin-left: 40%;
   }
 
@@ -415,10 +416,15 @@ h2 {
     padding: 6px 24px;
     text-decoration: none;
     text-shadow: 0px 1px 0px #ffffff;
-    transform: translateY(60vh);
+    transform: translateY(55vh);
     margin-left: 15%;
     position: relative;
     z-index: 3;
+  }
+
+  .produkter {
+    transform: translatey(-70vh);
+    width: 100%;
   }
 }
 
@@ -659,6 +665,7 @@ h2 {
 @media (max-height: 400px) {
   footer {
     position: static;
+    width: 100%;
   }
   header {
     padding-top: 40px;
@@ -668,7 +675,7 @@ h2 {
   background-color: #3e196a;
   box-sizing: border-box;
   width: 100%;
-  text-align: left;
+  text-align: center;
   font-family: "Noto Serif JP", serif;
   padding: 50px 50px 60px 50px;
   margin-top: 80px;
@@ -686,7 +693,7 @@ h2 {
 
 /* Footer left------------------------------------------------------------------ */
 .footer .footer-left {
-  width: 30%;
+  width: 33%;
 }
 .footer h3 {
   color: #ffffff;
@@ -721,7 +728,7 @@ h2 {
 
 /* Footer Center */
 .footer .footer-center {
-  width: 35%;
+  width: 33%;
 }
 .footer .footer-center i {
   background-color: #3c226b;
@@ -757,7 +764,7 @@ h2 {
 }
 /* Footer Right------------------------------------ */
 .footer .footer-right {
-  width: 30%;
+  width: 33%;
 }
 
 .footer .footer-company-about {
