@@ -3,6 +3,7 @@
 body {
   overflow-x: hidden;
   background-color: rgb(255, 255, 255);
+  height: 200px;
 }
 
 .events:hover {
@@ -22,30 +23,41 @@ body {
   min-width: 40%;
 }
 
+.summary,
 .menu-burger,
 .card_text,
-.card_text h2,
+.card_text h2 {
+  color: #000000;
+  font-family: "Raleway", sans-serif;
+}
+
 .instatext {
-  color: #3c226b;
+  color: #000000;
   font-family: "Noto Serif JP", serif;
+}
+
+#overskrift {
+  font-family: "Noto Serif JP", serif;
+  font-size: 25px;
 }
 
 h2 {
   margin: 8px 0px 12px 0px;
+  font-family: "Raleway", sans-serif;
 }
 
 .buttonprodukt {
   background: none;
-  border: 1px solid #3c226b;
+  border: 1px solid #000000;
   display: inline-block;
   cursor: pointer;
-  color: #3c226b;
+  color: #000000;
   font-family: Arial;
   font-size: 26px;
   padding: 6px 24px;
   text-decoration: none;
   text-shadow: 0px 1px 0px #ffffff;
-  font-family: "Noto Serif JP", serif;
+  font-family: "Raleway", sans-serif;
   transform: translateY(2vh);
   margin-left: 0%;
   position: relative;
@@ -55,11 +67,12 @@ h2 {
 .textwarpper > h1,
 h2 {
   color: whitesmoke;
+  font-family: "Raleway", sans-serif;
 }
 
 .produkt_text,
 .produkt_text > h2 {
-  color: #3c226b;
+  color: #000000;
   font-family: "Noto Serif JP", serif;
 }
 
@@ -82,9 +95,13 @@ h2 {
   top: 0;
   right: 0;
   z-index: 3;
+  font-family: "Raleway", sans-serif;
+  font-size: 70%;
 }
 
 .logo {
+  padding-top: 1%;
+  padding-left: 5%;
   width: 60%;
   background-color: rgb(62, 25, 106);
 }
@@ -100,6 +117,7 @@ h2 {
 }
 
 .illustration {
+  padding-left: 5%;
   display: flex;
   flex-direction: row;
   padding-bottom: 1%;
@@ -125,9 +143,10 @@ h2 {
 }
 
 .navbar {
+  margin-left: 10%;
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  width: 75%;
 }
 
 .navbar a {
@@ -145,9 +164,8 @@ h2 {
   border-bottom: #000000 solid 2px;
 }
 
-.navbar a:active {
+.navbar a:visited {
   border-bottom: solid black 2px;
-  text-decoration: none;
   color: #000000;
 }
 
@@ -174,7 +192,7 @@ h2 {
   position: absolute;
   height: 6px;
   width: 100%;
-  background: #000000;
+  background: #ffffff;
   opacity: 1;
   left: 0;
   -webkit-transform: rotate(0deg);
@@ -278,7 +296,7 @@ h2 {
   transition: all 0.5s ease;
   box-sizing: border-box;
   height: 300px;
-  width: 250px;
+  width: 300px;
   /* back to normal */
 }
 .insta:hover {
@@ -296,7 +314,7 @@ h2 {
   padding: 6px 24px;
   text-decoration: none;
   text-shadow: 0px 1px 0px #ffffff;
-  font-family: "Noto Serif JP", serif;
+  font-family: "Raleway", sans-serif;
   position: relative;
   z-index: 3;
 }
@@ -367,6 +385,7 @@ h2 {
 
   .card_text {
     padding: 2%;
+    text-align: center;
   }
   .container {
     margin-top: 0%;
@@ -384,6 +403,10 @@ h2 {
 }
 
 @media only screen and (min-width: 850px) and (max-width: 2000px) {
+  .footerbottom {
+    object-fit: contain;
+    height: 200px;
+  }
   #video {
     margin-top: 10%;
     margin-left: 2%;
@@ -396,9 +419,10 @@ h2 {
 
   .card_text {
     padding: 2%;
+    text-align: center;
   }
   .container {
-    margin-top: -40.2%;
+    margin-top: -43.2%;
     transform: translateY(-200%);
     transform: translateX(80%);
 
@@ -496,7 +520,7 @@ h2 {
   }
 
   #leftside {
-    margin-top: 0%;
+    margin-top: -35%;
     margin-left: -3%;
     width: 110%;
     z-index: 2;
@@ -511,7 +535,7 @@ h2 {
     position: relative;
     background-image: url(/images/forside_orange.png);
     background-size: cover;
-    height: 200px;
+    height: 40vh;
     transform: translateY(-80vh);
     margin-left: 15%;
     width: 90%;
@@ -519,7 +543,7 @@ h2 {
 
   .textwarpper {
     margin-left: 15%;
-    transform: translatey(30vh);
+    transform: translatey(10vh);
     z-index: 3;
     position: relative;
     width: 100%;
@@ -529,37 +553,30 @@ h2 {
     margin: 0%;
     font-size: 30px;
     width: 100%;
+    font-family: "Raleway", sans-serif;
   }
   .toptext2 {
     transform: translateY(45vh);
     margin-top: 0%;
     font-size: 30px;
     width: 100%;
+    font-family: "Raleway", sans-serif;
   }
 
   .instatext {
-    transform: translateY(-40px);
+    margin-top: 30%;
     text-align: center;
     margin-left: 0%;
     width: 100%;
   }
 
   .containerinsta {
-    transform: translateY(-50px);
     opacity: 1;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-flow: row wrap;
-  }
-  #bodyindeing2 {
-    display: inline-block;
-  }
-
-  #bodyindeling1 {
-    display: inline-block;
-    transform: translateY(-200px);
   }
 
   /*knapper-------------------------------*/
@@ -569,7 +586,7 @@ h2 {
     font-family: Arial;
     font-size: 26px;
     padding: 6px 24px;
-    transform: translateY(110vh);
+    transform: translateY(80vh);
     margin-left: 13%;
     position: relative;
     z-index: 3;
@@ -605,42 +622,51 @@ h2 {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 100%;
+    width: 70%;
     flex-flow: wrap;
+    margin-left: 17%;
   }
   .buttonprodukt {
-    font-size: 26px;
+    font-size: 15px;
     transform: translateY(2vh);
-    margin-left: -15%;
+    margin-left: -20%;
     z-index: 3;
+  }
+
+  .footer {
+    transform: translateY(10px);
   }
 }
 
-@media only screen and (min-width: 701px) and (max-width: 1650px) {
+@media only screen and (min-width: 901px) and (max-width: 2000px) {
   .burger-wrapper {
     display: none;
   }
 
+  .footer {
+    transform: translateY(30vh);
+  }
+
   .textwarpper {
-    margin-left: 15%;
+    margin-left: 7%;
     transform: translatey(20vh);
-    z-index: 3;
+    z-index: 2;
     position: relative;
-    width: 20%;
+    width: 35%;
   }
   #leftside {
     transform: translateY(-45%);
-    width: 61.1%;
+    width: 61.5%;
     margin-top: -5%;
     z-index: 1;
     position: relative;
-    height: 100vh;
+    height: 140vh;
     margin-left: -1%;
   }
 
   #rightside {
     height: 550px;
-    transform: translateY(-150%);
+    transform: translateY(-206%);
     margin-left: 40%;
     width: 60%;
     z-index: 2;
@@ -651,7 +677,7 @@ h2 {
   }
 
   .containerinsta {
-    transform: translateY(-140%);
+    transform: translateY(20vh);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -659,8 +685,13 @@ h2 {
   }
 
   .instatext {
-    transform: translateY(-55vh);
-    margin-left: 40%;
+    transform: translateY(10vh);
+    width: 100%;
+    text-align: center;
+  }
+
+  .insta {
+    padding: 1%;
   }
 
   .produkt {
@@ -671,14 +702,14 @@ h2 {
     padding: 6px 24px;
     text-decoration: none;
     text-shadow: 0px 1px 0px #ffffff;
-    transform: translateY(55vh);
-    margin-left: 15%;
+    transform: translateY(50vh);
+    margin-left: 7%;
     position: relative;
-    z-index: 3;
+    z-index: 2;
   }
 
   .produkter {
-    transform: translatey(-70vh);
+    transform: translatey(-110vh);
     width: 100%;
   }
 
@@ -687,17 +718,24 @@ h2 {
   }
 }
 
-@media only screen and (min-width: 1651px) and (max-width: 3000px) {
+@media only screen and (min-width: 2001px) and (max-width: 3000px) {
   .toptext1 {
-    transform: translateY(-20px);
+    transform: translateY(10vh);
     font-size: 50px;
   }
   .toptext2 {
-    transform: translateY(-20px);
+    transform: translateY(10vh);
     font-size: 50px;
+  }
+
+  .textwarpper {
+    margin-left: 10%;
+    position: relative;
+    z-index: 2;
   }
   #bodyindeing2 {
     display: inline-block;
+    margin-bottom: -50%;
   }
 
   #bodyindeling1 {
@@ -717,7 +755,7 @@ h2 {
 
   #rightside {
     height: 600px;
-    transform: translateY(-240%);
+    transform: translateY(-120vh);
     margin-left: 45%;
     width: 100%;
     z-index: 2;
@@ -726,9 +764,8 @@ h2 {
   }
 
   .containerinsta {
-    width: 90%;
-    margin-left: 7%;
-    transform: translateY(-500px);
+    width: 100%;
+    transform: translateY(-40vh);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -736,14 +773,14 @@ h2 {
   }
   .buttontop {
     font-size: 50px;
-    transform: translateY(65vh);
-    margin-left: 15%;
+    transform: translateY(35vh);
+    margin-left: 10%;
     position: relative;
     z-index: 3;
   }
 
   .instatext {
-    transform: translateY(-600px);
+    transform: translateY(-45vh);
     margin-left: 0%;
     width: 100%;
     text-align: center;
@@ -758,10 +795,12 @@ h2 {
     justify-content: center;
     width: 20%;
     flex-flow: wrap;
+    transform: translateY(-100vh);
+    height: 200px;
   }
 
   .produktcard_image {
-    width: 60%; /* for at være sikker på at billede scaler korrket med boxen*/
+    width: 100%; /* for at være sikker på at billede scaler korrket med boxen*/
     height: auto;
   }
   .produkt_text {
@@ -774,7 +813,7 @@ h2 {
   .containerprodukt {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     width: 100%;
     flex-flow: wrap;
   }
@@ -788,19 +827,19 @@ h2 {
 
 /*produktleggins side css og media querys----------------------------------------------------*/
 .backgroundleggings {
-  margin-top: 6%;
-  width: 80%;
-  margin-left: 5%;
+  margin-top: 11%;
+  width: 26%;
+  margin-left: 10%;
 }
 
 .containerleggings {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 30%;
+  width: 45%;
   flex-flow: wrap;
-  margin-left: 60%;
-  transform: translateY(-90vh);
+  margin-left: 50%;
+  transform: translateY(-80vh);
 }
 
 .info {
@@ -813,7 +852,7 @@ h2 {
 }
 
 .leggings_image {
-  width: 50%; /* for at være sikker på at billede scaler korrket med boxen*/
+  width: 25%; /* for at være sikker på at billede scaler korrket med boxen*/
 }
 .leggings_image img {
   width: 100%;
@@ -828,37 +867,39 @@ h2 {
 .card_text h2 {
   font-size: 20px;
   width: 100%;
-  text-align: left;
+  text-align: center;
 }
 
 .buttonshopprodukt {
   background: none;
-  border: 1px solid #bf4f28;
+  border: 1px solid #000000;
   display: inline-block;
   cursor: pointer;
-  color: #bf4f28;
+  color: #000000;
   padding: 6px 24px;
   text-decoration: none;
   text-shadow: 0px 1px 0px #ffffff;
-  font-family: "Noto Serif JP", serif;
-  font-size: 28px;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
   position: relative;
   z-index: 1;
-  transform: translate(-140vh, -70vh);
+  transform: translate(-10vh, -8vh);
 }
 
 @media only screen and (min-width: 0px) and (max-width: 700px) {
   .buttonshopprodukt {
-    transform: translate(13vh, 90vh);
+    transform: translate(33vh, -10vh);
   }
   .backgroundleggings {
-    width: 150%;
-    margin-left: -10%;
+    margin-top: 5%;
+    margin-left: 0.5%;
+    width: 90%;
+    height: 400px;
   }
 
   .containerleggings {
     width: 100%;
-    transform: translateY(-10vh);
+    transform: translateY(5vh);
     margin-bottom: 2%;
     display: inline-block;
     margin-left: 0%;
@@ -882,6 +923,10 @@ h2 {
   .hero {
     width: 100%;
     height: 1200px;
+  }
+
+  .hero2 {
+    height: 600px;
   }
   .card_text {
     width: 100%;
@@ -935,12 +980,12 @@ h2 {
   }
 }
 .footer {
+  font-family: "Raleway", sans-serif;
   background-color: #3e196a;
   box-sizing: border-box;
   width: 100%;
   text-align: center;
-  font-family: "Noto Serif JP", serif;
-  padding: 50px 50px 60px 50px;
+
   margin-top: 80px;
   position: relative;
   bottom: 0;
@@ -951,7 +996,6 @@ h2 {
 .footer .footer-right {
   display: inline-block;
   vertical-align: top;
-  font-family: "Noto Serif JP", serif;
 }
 
 /* Footer left------------------------------------------------------------------ */
@@ -964,7 +1008,7 @@ h2 {
 }
 /*  logo ------------------------------------------*/
 .footer .footer-left img {
-  width: 55%;
+  width: 40%;
 }
 
 .footer h3 span {
@@ -984,14 +1028,15 @@ h2 {
 }
 
 .footer .footer-company-name {
-  font-size: 14px;
+  font-size: 16px;
   color: #ffffff;
-  margin: 0;
+  margin-bottom: 12%;
 }
 
 /* Footer Center */
 .footer .footer-center {
   width: 33%;
+  margin-top: 1%;
 }
 .footer .footer-center i {
   background-color: #3c226b;
@@ -1028,6 +1073,7 @@ h2 {
 /* Footer Right------------------------------------ */
 .footer .footer-right {
   width: 33%;
+  margin-top: 1.5%;
 }
 
 .footer .footer-company-about {
@@ -1063,7 +1109,7 @@ h2 {
   color: #ffffff;
   text-align: center;
   line-height: 35px;
-  margin-right: 10%;
+  margin: 3.2%;
   margin-top: 2%;
   margin-bottom: 5px;
 }
