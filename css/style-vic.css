@@ -1,3 +1,5 @@
+/*id til h1 på om os siden*/ 
+
 h1 #omosoverskrift {
     text-align: center;
     font-family: 'Noto Serif JP', serif;
@@ -16,6 +18,8 @@ p {
     line-height: 40px;
 }
 
+/*Indhold til Om os siden*/
+
 .tekst {
     text-align: center;
     margin-left: 20%;
@@ -32,6 +36,8 @@ p {
     margin-top: 80px;
     margin-bottom: 20px;
 }
+
+/*Indhold til Heldragter*/
 
 .flex-container {
     display: flex;
@@ -54,6 +60,8 @@ p {
 .container2 h1 {
     text-align: center;
 }
+
+/*Ikoner til Heldragter*/
 
 .icons {
 display: flex;
