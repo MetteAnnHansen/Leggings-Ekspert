@@ -1,0 +1,89 @@
+body{
+    width: 100%;
+}
+
+.set-content-wrapper{
+    width: 100%;
+}
+
+.intro-video{
+    width: 100%;
+    text-align: center;
+    
+}
+.intro-video video{
+    width: 82%;
+}
+
+.sets-indhold{
+width: 70;
+display: flex;
+flex-direction: row;
+justify-content: center;
+}
+
+.set-1{
+    width: 31.5%;
+    margin-top: 2%;
+}
+.set-1 img{
+    width: 100%;
+}
+
+.set-2{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.set-info-tekst{
+    width: 100%;
+    line-height: 40px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-left: 5%;
+    box-sizing: border-box;
+}
+
+.set-info-ikon{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.set-ikon-tekst-1{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    padding-top: 5%;
+}
+.set-ikon-tekst-1 img{
+    width: 15%;
+}
+
+.set-ikon-tekst-2{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    padding-top: 5%;
+}
+.set-ikon-tekst-2 img{
+    width: 15%;
+}
+
+.ikon-tekst{
+    width: 70%;
+    text-align: center;
+    padding-left: 5%;
+}
+
+.ikon-tekst h2{
+    width: 100%;
+    margin-top: 0;
+}
+.ikon-tekst p{
+    width: 100%;
+}
