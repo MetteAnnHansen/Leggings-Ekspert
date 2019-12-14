@@ -3,12 +3,18 @@
 body {
   overflow-x: hidden;
   background-color: rgb(255, 255, 255);
+  height: 200px;
 }
 
 .events:hover {
-  transform: translate3D(0, -1px, 0) scale(1.1); /* move up slightly and zoom in */
+  transform: translate3D(0, 0px, 0) scale(1.1); /* move up slightly and zoom in */
   transition: all 0.4s ease; /* zoom in */
   cursor: pointer;
+}
+
+.produktcard_image:hover {
+  transform: translate3D(0, 0px, 0) scale(1.05);
+  transition: all 0.4s ease;
 }
 
 .card_image {
@@ -17,65 +23,281 @@ body {
   min-width: 40%;
 }
 
+.summary, p
+.menu-burger,
 .card_text,
-.card_text h2,
+.card_text h2 {
+  color: #000000;
+  font-family: "Raleway", sans-serif;
+}
+
+p{font-size: 20px;
+text-align: center;}
+
+
 .instatext {
-  width: 100%;
-  color: #3c226b;
+  color: #000000;
   font-family: "Noto Serif JP", serif;
+}
+
+#overskrift {
+  font-family: "Noto Serif JP", serif;
+  font-size: 25px;
 }
 
 h2 {
   margin: 8px 0px 12px 0px;
+  font-family: "Raleway", sans-serif;
 }
 
-.buttonprodukt {
+.buttonprodukt, #setdragt,.buttonshopprodukt, #setsshop {
   background: none;
-  border: 1px solid #3c226b;
+  border: 1px solid#E39621;
   display: inline-block;
   cursor: pointer;
-  color: #3c226b;
-  font-family: Arial;
-  font-size: 26px;
+  background-color: #E39621;
+  color: #ffffff;
+  font-size: 30px;
   padding: 6px 24px;
   text-decoration: none;
-  text-shadow: 0px 1px 0px #ffffff;
-  font-family: "Noto Serif JP", serif;
+  font-family: "Raleway", sans-serif;
   transform: translateY(2vh);
   margin-left: 0%;
   position: relative;
   z-index: 3;
 }
 
-.textwarpper {
-  margin-left: 15%;
-  transform: translatey(25vh);
-  width: 40%;
-  z-index: 3;
-  position: relative;
-}
 .textwarpper > h1,
 h2 {
   color: whitesmoke;
-  font-family: "Noto Serif JP", serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .produkt_text,
 .produkt_text > h2 {
-  color: #3c226b;
+  color: #000000;
   font-family: "Noto Serif JP", serif;
-}
-
-.produktcard_image {
-  border: 5px solid #3c226b;
-  border-radius: 4px;
 }
 
 #leftside {
   background-color: #3e196a;
 }
 
-/*dfaults-- globals-------------------------------*/
+/*globals-- default---------------------------------------------*/
+
+/*navigation-----------------------------------------------*/
+
+
+.navbar .current{
+  color: #000000;
+  border-bottom: #000000 solid 2px;
+
+}
+.navigation {
+  background-color: transparent;
+  margin: 0%;
+  padding: 0%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  font-family: "Raleway", sans-serif;
+  font-size: 70%;
+}
+
+.logo {
+  padding-top: 1%;
+  padding-left: 5%;
+  width: 60%;
+  background-color: rgb(62, 25, 106);
+}
+
+.logo img {
+  width: 20%;
+}
+
+.nav-illus {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.illustration {
+  padding-left: 5%;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 1%;
+  width: 80%;
+  justify-content: flex-end;
+}
+.some-pics {
+  padding-right: 2%;
+  width: 5%;
+}
+
+.some-pics1 {
+  padding-right: 0%;
+  width: 5%;
+}
+
+.some-pics img {
+  width: 100%;
+}
+
+.some-pics1 img {
+  width: 100%;
+}
+
+.navbar {
+  margin-left: 10%;
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-size: 2em;
+  position: relative;
+  opacity: 0.75;
+  display: inline-block;
+  color: #000000;
+}
+
+.navbar a:hover {
+  opacity: 1;
+  color: #000000;
+  border-bottom: #000000 solid 2px;
+}
+
+.navbar a:visited {
+  border-bottom: solid black 2px;
+  color: #000000;
+}
+
+/*-----------------------------------------------burger bar--------------------------------------------*/
+
+#nav-burger {
+  width: 60px;
+  height: 45px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  float: right;
+}
+
+#nav-burger span {
+  display: block;
+  position: absolute;
+  height: 6px;
+  width: 100%;
+  background: #ffffff;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+#nav-burger span:nth-child(1) {
+  top: 0px;
+}
+
+#nav-burger span:nth-child(2) {
+  top: 12px;
+}
+
+#nav-burger span:nth-child(3) {
+  top: 24px;
+}
+
+#nav-burger.open span:nth-child(1) {
+  top: 18px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+#nav-burger.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+#nav-burger.open span:nth-child(3) {
+  top: 18px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+.menu-burger {
+  margin-top: 7%;
+  z-index: 1000000;
+  font-weight: bold;
+  font-size: 15px;
+  width: 300%;
+  background: #ffffff;
+  position: absolute;
+  text-align: center;
+  transform: translate(-60%, 15%);
+}
+.menu-burger ul {
+  padding: 0;
+  list-style-type: none;
+  list-style-image: none;
+  width: 100%;
+}
+.menu-burger li {
+  display: block;
+  padding: 15px 0 15px 0;
+  border-bottom: #dddddd 1px solid;
+}
+.menu-burger li:hover {
+  display: block;
+  background: #ffffff;
+  padding: 15px 0 15px 0;
+  border-bottom: #dddddd 1px solid;
+}
+.menu-burger ul li a {
+  text-decoration: none;
+  margin: 0px;
+  color: #666;
+}
+.menu-burger ul li a:hover {
+  color: #666;
+  text-decoration: none;
+}
+.menu-burger a {
+  text-decoration: none;
+  color: #666;
+}
+.menu-burger a:hover {
+  text-decoration: none;
+  color: #666;
+}
+
+.burger-wrapper {
+  display: none;
+}
+
+/*navigation-----------------------------------------------*/
 
 /*instagram forside-----------------------------------------------*/
 .insta {
@@ -84,7 +306,7 @@ h2 {
   transition: all 0.5s ease;
   box-sizing: border-box;
   height: 300px;
-  width: 250px;
+  width: 300px;
   /* back to normal */
 }
 .insta:hover {
@@ -93,37 +315,16 @@ h2 {
   cursor: pointer;
 }
 
-.navigation {
-  background-color: pink;
-  margin: 0%;
-  padding: 0%;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  z-index: 9;
-}
-
-.logo {
-  width: 70%;
-}
-
-.nav-illus {
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-}
-
 .buttontop {
   background: none;
-  border: 1px solid #ffffff;
+  border: 1px solid #E39621;
   display: inline-block;
   cursor: pointer;
+  background-color: #E39621;
   color: #ffffff;
   padding: 6px 24px;
   text-decoration: none;
-  text-shadow: 0px 1px 0px #ffffff;
-  font-family: "Noto Serif JP", serif;
+  font-family: "Raleway", sans-serif;
   position: relative;
   z-index: 3;
 }
@@ -135,24 +336,53 @@ h2 {
   top: 1px;
 }
 
-.produktcard_image {
-  border: 5px solid #3c226b;
-  border-radius: 4px;
-}
+/*defaults-- globals-------------------------------*/
 
 /*event side css og media querys----------------------------------------------------*/
 
 @media only screen and (min-width: 0px) and (max-width: 360px) {
   #video {
     margin-left: -5%;
-    height: 160px;
+    height: 200px;
     padding: 5%;
+  }
+
+  video {
+    margin-top: 5%;
+    margin-left: 5%;
+    height: 600px;
+    width: 100%;
+    transform: translateY(100px);
+  }
+
+  #video {
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+  }
+  .events {
+    width: 70%;
+    padding: 1%;
+  }
+
+  .container {
+    margin-top: 35%;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+  }
+  .footer {
+    transform: translateY(-200px);
   }
 }
 
 @media only screen and (min-width: 361px) and (max-width: 850px) {
   #video {
-    margin-top: 5%;
     margin-left: 5%;
     height: 600px;
     width: 90%;
@@ -164,6 +394,7 @@ h2 {
 
   .card_text {
     padding: 2%;
+    text-align: center;
   }
   .container {
     margin-top: 0%;
@@ -176,26 +407,30 @@ h2 {
     max-width: 100%;
     flex-wrap: wrap;
     position: relative;
-    z-index: 99;
+    z-index: 1;
   }
 }
 
 @media only screen and (min-width: 850px) and (max-width: 2000px) {
+  .footerbottom {
+    object-fit: contain;
+    height: 200px;
+  }
   #video {
-    margin-top: 5%;
-    margin-left: 2%;
-    height: 600px;
+    width: 62%;
   }
   .events {
+    margin-top: 3%;
     width: 18%;
     padding: 1%;
   }
 
   .card_text {
     padding: 2%;
+    text-align: center;
   }
   .container {
-    margin-top: -43%;
+    margin-top: -43.2%;
     transform: translateY(-200%);
     transform: translateX(80%);
 
@@ -205,14 +440,13 @@ h2 {
     max-width: 100%;
     flex-wrap: wrap;
     position: relative;
-    z-index: 99;
+    z-index: 1;
   }
 
   /*Forside css ---------------------------------------------------*/
-  /*produkter-------------------------------*/
+
   .produkt {
     width: 100%;
-
     overflow: hidden;
     background: none;
     transition: all 0.5s ease;
@@ -235,28 +469,70 @@ h2 {
     transform: translateY(0%);
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     width: 100%;
     flex-flow: wrap;
   }
   .buttonprodukt {
-    font-size: 26px;
+    font-size: 19px;
     padding: 6px 24px;
     transform: translateY(2vh);
     margin-left: 0%;
     z-index: 3;
   }
+
+  .buttonshopprodukt {
+    background-color: #E39621;
+    color: #ffffff;
+    display: inline-block;
+    cursor: pointer;
+    padding: 6px 24px;
+    text-decoration: none;
+    font-family: "Raleway", sans-serif;
+    position: relative;
+    z-index: 3;
+  }
+  .hero2{
+    margin-top: 10%;
+  }
 }
 
-/*Forside css  default----------------------------------------------------*/
 
 /*media querys----------------------------------------------------*/
-@media only screen and (min-width: 0px) and (max-width: 700px) {
+@media only screen and (min-width: 0px) and (max-width: 900px) {
+  .burger-wrapper {
+    display: inline;
+    position: relative;
+    z-index: 99;
+    margin-right: 5%;
+  }
+  #nav-burger {
+    margin-top: -10px;
+    height: 30px;
+    width: 50px;
+  }
+  
+
+  .illustration {
+    display: none;
+  }
+  .navbar {
+    display: none;
+  }
+
+  .logo img {
+    background-color: #3e196a;
+    width: 50%;
+  }
+  .navigation {
+    background-color: #3e196a;
+  }
+
   #leftside {
-    margin-top: 0%;
-    margin-left: -2%;
+    margin-top: -35%;
+    margin-left: -3%;
     width: 110%;
-    z-index: 2;
+    z-index: 1;
     position: relative;
     height: 90vh;
   }
@@ -266,53 +542,53 @@ h2 {
 
     padding: 0%;
     position: relative;
-    background-image: url(/images/forsideprøve.jpg);
+    background-image: url(/images/forside_orange.png);
     background-size: cover;
-    height: 200px;
+    height: 40vh;
     transform: translateY(-80vh);
     margin-left: 15%;
     width: 90%;
   }
 
-  .navigation {
-    visibility: hidden;
+  .textwarpper {
+    margin-left: 15%;
+    transform: translatey(10vh);
+    z-index:2;
+    position: relative;
+    width: 100%;
   }
-
   .toptext1 {
     transform: translateY(45vh);
     margin: 0%;
     font-size: 30px;
     width: 100%;
+    font-family: "Raleway", sans-serif;
   }
   .toptext2 {
     transform: translateY(45vh);
     margin-top: 0%;
-    font-size: 15px;
+    font-size: 30px;
     width: 100%;
+    font-family: "Raleway", sans-serif;
   }
 
   .instatext {
-    transform: translateY(-40px);
+    margin-top: 30%;
     text-align: center;
     margin-left: 0%;
+    width: 100%;
+  }
+  .insta {
+    padding: 2%;
   }
 
   .containerinsta {
-    transform: translateY(-50px);
     opacity: 1;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-flow: row wrap;
-  }
-  #bodyindeing2 {
-    display: inline-block;
-  }
-
-  #bodyindeling1 {
-    display: inline-block;
-    transform: translateY(-200px);
   }
 
   /*knapper-------------------------------*/
@@ -322,10 +598,10 @@ h2 {
     font-family: Arial;
     font-size: 26px;
     padding: 6px 24px;
-    transform: translateY(102vh);
+    transform: translateY(80vh);
     margin-left: 13%;
     position: relative;
-    z-index: 3;
+    z-index: 2;
   }
 
   .produkt {
@@ -341,8 +617,9 @@ h2 {
     flex-flow: wrap;
   }
 
+  .produkt a,
   .produktcard_image {
-    width: 50%; /* for at være sikker på at billede scaler korrket med boxen*/
+    width: 100%; /* for at være sikker på at billede scaler korrket med boxen*/
     height: auto;
   }
   .produkt_text {
@@ -357,42 +634,60 @@ h2 {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 100%;
+    width: 70%;
     flex-flow: wrap;
+    margin-left: 17%;
   }
   .buttonprodukt {
-    font-size: 26px;
+    font-size: 15px;
     transform: translateY(2vh);
-    margin-left: 0%;
+    margin-left: -20%;
     z-index: 3;
+  }
+
+  .footer {
+    transform: translateY(10px);
   }
 }
 
-@media only screen and (min-width: 700px) and (max-width: 1650px) {
+@media only screen and (min-width: 901px) and (max-width: 1800px) {
+  .burger-wrapper {
+    display: none;
+  }
+
+
+
+  .textwarpper {
+    margin-left: 7%;
+    transform: translatey(20vh);
+    z-index: 2;
+    position: relative;
+    width: 35%;
+  }
   #leftside {
     transform: translateY(-45%);
-    width: 61.2%;
+    width: 63.15%;
     margin-top: -5%;
     z-index: 1;
     position: relative;
-    height: 100vh;
+    height: 140vh;
     margin-left: -1%;
   }
 
   #rightside {
-    height: 500px;
-    transform: translateY(-180%);
+    height: 550px;
+    transform: translateY(-142vh);
     margin-left: 40%;
     width: 60%;
-    z-index: 2;
+    z-index: 3;
     padding: 0%;
     position: relative;
-    background-image: url(/images/forsideprøve.jpg);
+    background-image: url(/images/forside_orange.png);
     background-size: cover;
   }
 
   .containerinsta {
-    transform: translateY(-100%);
+    transform: translateY(-30vh);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -400,8 +695,13 @@ h2 {
   }
 
   .instatext {
-    transform: translateY(-400px);
-    margin-left: 40%;
+    transform: translateY(-35vh);
+    width: 100%;
+    text-align: center;
+  }
+
+  .insta {
+    padding: 2%;
   }
 
   .produkt {
@@ -412,34 +712,61 @@ h2 {
     padding: 6px 24px;
     text-decoration: none;
     text-shadow: 0px 1px 0px #ffffff;
-    transform: translateY(60vh);
-    margin-left: 15%;
+    transform: translateY(50vh);
+    margin-left: 7%;
     position: relative;
-    z-index: 3;
-  }
-}
-
-@media only screen and (min-width: 1651px) and (max-width: 3000px) {
-  .toptext1 {
-    transform: translateY(-20px);
-    font-size: 50px;
-  }
-  .toptext2 {
-    transform: translateY(-20px);
-    font-size: 50px;
-  }
-  #bodyindeing2 {
-    display: inline-block;
+    z-index: 2;
   }
 
-  #bodyindeling1 {
-    display: inline-block;
+  .produkter {
+    transform: translatey(-70vh);
     width: 100%;
   }
 
+  .navigation {
+    background-color: white;
+    z-index: 99;
+  }
+}
+
+@media only screen and (min-width: 1701px) and (max-width: 2001px) {
+
+  .containerprodukt {
+    transform: translateY(0%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    flex-flow: wrap;
+}
+
+  
+  .navigation {
+    background-color: #ffffff;
+    
+   position: fixed;
+    z-index: 99;
+
+  }
+  .toptext1 {
+    transform: translateY(10vh);
+    font-size: 50px;
+  }
+  .toptext2 {
+    transform: translateY(10vh);
+    font-size: 50px;
+  }
+
+  .textwarpper {
+    margin-left: 10%;
+    position: relative;
+    z-index: 2;
+  }
+  
+
   #leftside {
     transform: translateY(-60%);
-    width:61.2%;
+    width: 63.1%;
     margin-top: -1%;
     z-index: 1;
     position: relative;
@@ -448,19 +775,18 @@ h2 {
   }
 
   #rightside {
-    height: 600px;
-    transform: translateY(-240%);
-    margin-left: 45%;
-    width: 100%;
+    height: 90vh;
+    transform: translateY(-130vh);
+    margin-left: 40%;
+    width: 70%;
     z-index: 2;
     position: relative;
-    background-image: url(/images/forsideprøve.jpg);
+    background-image: url(/images/forside_orange.png);
   }
 
   .containerinsta {
-    width: 90%;
-    margin-left:7%;
-    transform: translateY(-500px);
+    width: 100%;
+    transform: translateY(-40vh);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -468,17 +794,16 @@ h2 {
   }
   .buttontop {
     font-size: 50px;
-    transform: translateY(65vh);
-    margin-left: 15%;
+    transform: translateY(50vh);
+    margin-left: 10%;
     position: relative;
     z-index: 3;
   }
 
   .instatext {
-    transform: translateY(-600px);
-    margin-left: 0%;
+    transform: translateY(-45vh);
     width: 100%;
-  text-align: center;
+    text-align: center;
   }
   .produkt {
     background: none;
@@ -490,23 +815,21 @@ h2 {
     justify-content: center;
     width: 20%;
     flex-flow: wrap;
+    transform: translateY(-100vh);
+    height:auto;
+
+    
   }
 
   .produktcard_image {
-    width: 60%; /* for at være sikker på at billede scaler korrket med boxen*/
+    width: 100%; /* for at være sikker på at billede scaler korrket med boxen*/
     height: auto;
   }
-  .produkt_text {
-    text-align: center;
-    padding: 5%;
-    width: 60%;
-    padding-top: 0%;
-  }
-
+  
   .containerprodukt {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     width: 100%;
     flex-flow: wrap;
   }
@@ -518,27 +841,31 @@ h2 {
   }
 }
 
-/*produktleggins side css og media querys----------------------------------------------------*/
+/*produktleggins side css og media querys- til det---------------------------------------------------*/
+.hero {display: flex;
+flex-direction: row;
+margin-top: 10%;
+width: 100%;}
+
 .backgroundleggings {
-  width: 80%;
-  margin-bottom: -10%;
+  margin-left: 10%;
+  width: 27%;
 }
 
+.backgroundleggings img{ width:100%}
+
 .containerleggings {
+  margin-left: 10%;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 30%;
+  width: 46%;
   flex-flow: wrap;
-  margin-left: 52%;
-  transform: translateY(-78vh);
-  transform: translate();
-  margin-bottom: -70%;
 }
+
 
 .info {
   background: none;
-  padding: 2%;
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -546,46 +873,53 @@ h2 {
 }
 
 .leggings_image {
-  width: 50%; /* for at være sikker på at billede scaler korrket med boxen*/
+  width: 25%; /* for at være sikker på at billede scaler korrket med boxen*/
 }
 .leggings_image img {
-  width: 100%;
+  width: 70%;
 }
-.hero {
-  width: 100%;
-  height: 600px;
-}
+
 .card_text {
   width: 100%;
 }
 .card_text h2 {
   font-size: 20px;
   width: 100%;
-  text-align: left;
+  text-align: center;
+}
+
+.buttonshopprodukt {
+  
+  font-size: 30px;
+  position: relative;
+  z-index: 1;
+  margin-top: 10%;
+
 }
 
 @media only screen and (min-width: 0px) and (max-width: 700px) {
-  .backgroundleggings {
-    width: 150%;
-    margin-left: -10%;
-  }
 
+  .hero{display: flex;
+  flex-direction: column;}
+  
+  .backgroundleggings {
+    margin-top: 15%;
+  width: 80%;
+  }
+  
   .containerleggings {
     width: 100%;
-    margin-left: 0%;
-    transform: translateY(10vh);
-    transform: translate();
-    margin-bottom: 2%;
-    display: inline-block;
+    margin-left: -5%;
   }
 
   .info {
     background: none;
-    padding: 2%;
+    margin-left: 5%;
+    margin-right: -5%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
-    flex-flow: nowrap;
+    align-items: center;
   }
 
   .leggings_image {
@@ -596,35 +930,16 @@ h2 {
   }
   .hero {
     width: 100%;
-    height: 600px;
   }
   .card_text {
+    text-align: center;
     width: 100%;
   }
   .card_text h2 {
-    padding-left: 2%;
-    width: 92%;
-    font-size: 16px;
-    text-align: left;
+    text-align: center;
   }
 
-  footer {
-    transform: translateY(40vh);
-  }
-}
-
-@media only screen and (min-width: 700px) and (max-width: 1250px) {
-  .containerleggings {
-    transform: translateY(-62vh);
-  }
-  .backgroundleggings {
-    width: 90%;
-    margin-left: -10%;
-  }
-
-  footer {
-    transform: translateY(-26vh);
-  }
+  
 }
 
 /*footer------------------------------------------------------------------*/
@@ -632,18 +947,19 @@ h2 {
 @media (max-height: 400px) {
   footer {
     position: static;
+    width: 100%;
   }
   header {
     padding-top: 40px;
   }
 }
 .footer {
+  font-family: "Raleway", sans-serif;
   background-color: #3e196a;
   box-sizing: border-box;
   width: 100%;
-  text-align: left;
-  font-family: "Noto Serif JP", serif;
-  padding: 50px 50px 60px 50px;
+  text-align: center;
+
   margin-top: 80px;
   position: relative;
   bottom: 0;
@@ -654,12 +970,11 @@ h2 {
 .footer .footer-right {
   display: inline-block;
   vertical-align: top;
-  font-family: "Noto Serif JP", serif;
 }
 
 /* Footer left------------------------------------------------------------------ */
 .footer .footer-left {
-  width: 30%;
+  width: 33%;
 }
 .footer h3 {
   color: #ffffff;
@@ -667,7 +982,7 @@ h2 {
 }
 /*  logo ------------------------------------------*/
 .footer .footer-left img {
-  width: 55%;
+  width: 40%;
 }
 
 .footer h3 span {
@@ -687,14 +1002,15 @@ h2 {
 }
 
 .footer .footer-company-name {
-  font-size: 14px;
+  font-size: 16px;
   color: #ffffff;
-  margin: 0;
+  margin-bottom: 12%;
 }
 
 /* Footer Center */
 .footer .footer-center {
-  width: 35%;
+  width: 33%;
+  margin-top: 1%;
 }
 .footer .footer-center i {
   background-color: #3c226b;
@@ -730,7 +1046,8 @@ h2 {
 }
 /* Footer Right------------------------------------ */
 .footer .footer-right {
-  width: 30%;
+  width: 33%;
+  margin-top: 1.5%;
 }
 
 .footer .footer-company-about {
@@ -766,7 +1083,7 @@ h2 {
   color: #ffffff;
   text-align: center;
   line-height: 35px;
-  margin-right: 10%;
+  margin: 3.2%;
   margin-top: 2%;
   margin-bottom: 5px;
 }
@@ -781,7 +1098,7 @@ h2 {
   .footer .footer-right {
     display: block;
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 5px;
     text-align: center;
   }
   .footer .footer-center i {

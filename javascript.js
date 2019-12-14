@@ -16,7 +16,6 @@ $(document).ready(function() {
       '<source src="../images/tisvildevid.mp4" type="video/mp4"></source>'
     );
     video.load();
-    $("body").css("background-color", "white");
   });
 }); ///////////------------------
 
@@ -26,7 +25,6 @@ $(document).ready(function() {
       '<source src="../images/aarhusyoga.mp4" type="video/mp4"></source>'
     );
     video.load();
-    $("body").css("background-color", "rgba(128, 255, 0, 0.226)");
   });
 });
 ///////////------------------
@@ -36,10 +34,8 @@ $(document).ready(function() {
       '<source src="../images/Beloudvid.mp4" type="video/mp4"></source>'
     );
     video.load();
-    $("body").css("background-color", "black");
   });
 });
-
 ///////////--------------------------------------------------------fade in puligin at
 
 $(window).on("load", function() {
@@ -66,14 +62,13 @@ $(window).on("load", function() {
     })
     .scroll(); //invoke scroll-handler on page-load
 });
-
 var slideimages = new Array(); // array for at preload i dommen
 slideimages[0] = new Image(); // vi laver en instanse til hvert billede så det kan hentes via src
-slideimages[0].src = "../images/post_1.jpg"; // vi sætter sorce til arrayet
+slideimages[0].src = "../images/insta_temp_2.jpg"; // vi sætter sorce til arrayet
 slideimages[1] = new Image();
 slideimages[1].src = "../images/post_5.jpg";
 slideimages[2] = new Image();
-slideimages[2].src = "../images/post_2.jpg";
+slideimages[2].src = "../images/post_1.jpg";
 
 // i incrementer igennem som variable det vil sige at den stiger med 1
 var i = 0;
@@ -88,3 +83,32 @@ function slideit() {
 }
 
 slideit();
+/////burger js
+
+$(document).ready(function() {
+  $(".menu-burger").hide();
+  $("#nav-burger").click(function() {
+    $(this).toggleClass("open");
+    $(".menu-burger").slideToggle("slow");
+  });
+});
+
+///////burger close 
+$(".menu-burger li ").on("click", function() {
+  $(".menu-burger").hide();
+  $("#nav-burger").click(function() {
+    $(this).toggleClass("open");
+  });
+});
+
+/// autoplay film til sæts
+
+$(document).ready(function() {
+  $("#start").on("ended", function() {
+    this.play();
+  });
+});
+
+
+////////
+
