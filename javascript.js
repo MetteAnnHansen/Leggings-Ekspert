@@ -64,11 +64,11 @@ $(window).on("load", function() {
 });
 var slideimages = new Array(); // array for at preload i dommen
 slideimages[0] = new Image(); // vi laver en instanse til hvert billede så det kan hentes via src
-slideimages[0].src = "../images/post_1.jpg"; // vi sætter sorce til arrayet
+slideimages[0].src = "../images/insta_temp_2.jpg"; // vi sætter sorce til arrayet
 slideimages[1] = new Image();
 slideimages[1].src = "../images/post_5.jpg";
 slideimages[2] = new Image();
-slideimages[2].src = "../images/insta_temp_2.jpg";
+slideimages[2].src = "../images/post_1.jpg";
 
 // i incrementer igennem som variable det vil sige at den stiger med 1
 var i = 0;
@@ -93,6 +93,7 @@ $(document).ready(function() {
   });
 });
 
+///////burger close 
 $(".menu-burger li ").on("click", function() {
   $(".menu-burger").hide();
   $("#nav-burger").click(function() {
@@ -102,6 +103,12 @@ $(".menu-burger li ").on("click", function() {
 
 /// autoplay film til sæts
 
-$("#start").bind("ended", function() {
-  this.play();
+$(document).ready(function() {
+  $("#start").on("ended", function() {
+    this.play();
+  });
 });
+
+
+////////
+

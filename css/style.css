@@ -23,13 +23,17 @@ body {
   min-width: 40%;
 }
 
-.summary,
+.summary, p
 .menu-burger,
 .card_text,
 .card_text h2 {
   color: #000000;
   font-family: "Raleway", sans-serif;
 }
+
+p{font-size: 20px;
+text-align: center;}
+
 
 .instatext {
   color: #000000;
@@ -39,6 +43,7 @@ body {
 #overskrift {
   font-family: "Noto Serif JP", serif;
   font-size: 25px;
+  margin-top: 0%;
 }
 
 h2 {
@@ -46,17 +51,16 @@ h2 {
   font-family: "Raleway", sans-serif;
 }
 
-.buttonprodukt {
+.buttonprodukt, #setdragt,.buttonshopprodukt, #setsshop {
   background: none;
-  border: 1px solid #000000;
+  border: 1px solid#E39621;
   display: inline-block;
   cursor: pointer;
-  color: #000000;
-  font-family: Arial;
-  font-size: 26px;
+  background-color: #E39621;
+  color: #ffffff;
+  font-size: 30px;
   padding: 6px 24px;
   text-decoration: none;
-  text-shadow: 0px 1px 0px #ffffff;
   font-family: "Raleway", sans-serif;
   transform: translateY(2vh);
   margin-left: 0%;
@@ -83,8 +87,15 @@ h2 {
 /*globals-- default---------------------------------------------*/
 
 /*navigation-----------------------------------------------*/
+
+
+.navbar .current{
+  color: #000000;
+  border-bottom: #000000 solid 2px;
+
+}
 .navigation {
-  background-color: none;
+  background-color: transparent;
   margin: 0%;
   padding: 0%;
   width: 100%;
@@ -284,7 +295,7 @@ h2 {
 }
 
 .burger-wrapper {
-  display: hide;
+  display: none;
 }
 
 /*navigation-----------------------------------------------*/
@@ -307,13 +318,13 @@ h2 {
 
 .buttontop {
   background: none;
-  border: 1px solid #ffffff;
+  border: 1px solid #E39621;
   display: inline-block;
   cursor: pointer;
+  background-color: #E39621;
   color: #ffffff;
   padding: 6px 24px;
   text-decoration: none;
-  text-shadow: 0px 1px 0px #ffffff;
   font-family: "Raleway", sans-serif;
   position: relative;
   z-index: 3;
@@ -332,30 +343,20 @@ h2 {
 
 @media only screen and (min-width: 0px) and (max-width: 360px) {
   #video {
-    margin-left: -5%;
+    margin-top: 20%;
     height: 200px;
     padding: 5%;
+    width: 100%;
+    margin-left: -5%;
   }
 
-  video {
-    margin-top: 5%;
-    margin-left: 5%;
-    height: 600px;
-    width: 100%;
-    transform: translateY(100px);
-  }
-
-  #video {
-    width: 100%;
-    padding: 0%;
-    margin: 0%;
-  }
   .events {
     width: 70%;
     padding: 1%;
   }
 
   .container {
+    margin-top: 35%;
     width: 100%;
     justify-content: center;
     display: flex;
@@ -363,8 +364,7 @@ h2 {
     max-width: 100%;
     flex-wrap: wrap;
     position: relative;
-    z-index: 2;
-    transform: translateY(-200px);
+    z-index: 1;
   }
   .footer {
     transform: translateY(-200px);
@@ -373,7 +373,6 @@ h2 {
 
 @media only screen and (min-width: 361px) and (max-width: 850px) {
   #video {
-    margin-top: 5%;
     margin-left: 5%;
     height: 600px;
     width: 90%;
@@ -398,7 +397,7 @@ h2 {
     max-width: 100%;
     flex-wrap: wrap;
     position: relative;
-    z-index: 99;
+    z-index: 1;
   }
 }
 
@@ -408,24 +407,23 @@ h2 {
     height: 200px;
   }
   #video {
-    margin-top: 10%;
-    margin-left: 2%;
-    height: 600px;
+    width: 62%;
   }
   .events {
+    margin-top: 3%;
     width: 18%;
     padding: 1%;
   }
 
   .card_text {
+    padding-top: 0%;
     padding: 2%;
     text-align: center;
   }
   .container {
-    margin-top: -43.2%;
+    margin-top: -39%;
     transform: translateY(-200%);
     transform: translateX(80%);
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -436,7 +434,7 @@ h2 {
   }
 
   /*Forside css ---------------------------------------------------*/
-  /*produkter-------------------------------*/
+
   .produkt {
     width: 100%;
     overflow: hidden;
@@ -466,7 +464,7 @@ h2 {
     flex-flow: wrap;
   }
   .buttonprodukt {
-    font-size: 26px;
+    font-size: 19px;
     padding: 6px 24px;
     transform: translateY(2vh);
     margin-left: 0%;
@@ -474,30 +472,26 @@ h2 {
   }
 
   .buttonshopprodukt {
-    background: none;
-    border: 1px solid #ffffff;
+    background-color: #E39621;
+    color: #ffffff;
     display: inline-block;
     cursor: pointer;
-    color: #ffffff;
     padding: 6px 24px;
     text-decoration: none;
-    text-shadow: 0px 1px 0px #ffffff;
-    font-family: "Noto Serif JP", serif;
+    font-family: "Raleway", sans-serif;
     position: relative;
     z-index: 3;
   }
+  .hero2{
+    margin-top: 10%;
+  }
 }
 
-/*Forside css  default----------------------------------------------------*/
 
 /*media querys----------------------------------------------------*/
-<<<<<<< HEAD
-@media only screen and (min-width: 0px) and (max-width: 700px) {
-=======
 @media only screen and (min-width: 0px) and (max-width: 900px) {
->>>>>>> tiljesson
   .burger-wrapper {
-    display: show;
+    display: inline;
     position: relative;
     z-index: 99;
     margin-right: 5%;
@@ -507,6 +501,7 @@ h2 {
     height: 30px;
     width: 50px;
   }
+  
 
   .illustration {
     display: none;
@@ -516,18 +511,18 @@ h2 {
   }
 
   .logo img {
-    background-color: #3c226b;
+    background-color: #3e196a;
     width: 50%;
   }
   .navigation {
-    background-color: #3c226b;
+    background-color: #3e196a;
   }
 
   #leftside {
     margin-top: -35%;
     margin-left: -3%;
     width: 110%;
-    z-index: 2;
+    z-index: 1;
     position: relative;
     height: 90vh;
   }
@@ -548,7 +543,7 @@ h2 {
   .textwarpper {
     margin-left: 15%;
     transform: translatey(10vh);
-    z-index: 3;
+    z-index:2;
     position: relative;
     width: 100%;
   }
@@ -573,6 +568,9 @@ h2 {
     margin-left: 0%;
     width: 100%;
   }
+  .insta {
+    padding: 2%;
+  }
 
   .containerinsta {
     opacity: 1;
@@ -593,7 +591,7 @@ h2 {
     transform: translateY(80vh);
     margin-left: 13%;
     position: relative;
-    z-index: 3;
+    z-index: 2;
   }
 
   .produkt {
@@ -642,14 +640,12 @@ h2 {
   }
 }
 
-@media only screen and (min-width: 901px) and (max-width: 2000px) {
+@media only screen and (min-width: 901px) and (max-width: 1800px) {
   .burger-wrapper {
     display: none;
   }
 
-  .footer {
-    transform: translateY(30vh);
-  }
+
 
   .textwarpper {
     margin-left: 7%;
@@ -660,7 +656,7 @@ h2 {
   }
   #leftside {
     transform: translateY(-45%);
-    width: 61.5%;
+    width: 63.15%;
     margin-top: -5%;
     z-index: 1;
     position: relative;
@@ -670,10 +666,10 @@ h2 {
 
   #rightside {
     height: 550px;
-    transform: translateY(-206%);
+    transform: translateY(-142vh);
     margin-left: 40%;
     width: 60%;
-    z-index: 2;
+    z-index: 3;
     padding: 0%;
     position: relative;
     background-image: url(/images/forside_orange.png);
@@ -681,7 +677,7 @@ h2 {
   }
 
   .containerinsta {
-    transform: translateY(20vh);
+    transform: translateY(-30vh);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -689,13 +685,13 @@ h2 {
   }
 
   .instatext {
-    transform: translateY(10vh);
+    transform: translateY(-35vh);
     width: 100%;
     text-align: center;
   }
 
   .insta {
-    padding: 1%;
+    padding: 2%;
   }
 
   .produkt {
@@ -713,16 +709,35 @@ h2 {
   }
 
   .produkter {
-    transform: translatey(-110vh);
+    transform: translatey(-70vh);
     width: 100%;
   }
 
   .navigation {
     background-color: white;
+    z-index: 99;
   }
 }
 
-@media only screen and (min-width: 2001px) and (max-width: 3000px) {
+@media only screen and (min-width: 1701px) and (max-width: 2001px) {
+
+  .containerprodukt {
+    transform: translateY(0%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    flex-flow: wrap;
+}
+
+  
+  .navigation {
+    background-color: #ffffff;
+    
+   position: fixed;
+    z-index: 99;
+
+  }
   .toptext1 {
     transform: translateY(10vh);
     font-size: 50px;
@@ -737,19 +752,11 @@ h2 {
     position: relative;
     z-index: 2;
   }
-  #bodyindeing2 {
-    display: inline-block;
-    margin-bottom: -50%;
-  }
-
-  #bodyindeling1 {
-    display: inline-block;
-    width: 100%;
-  }
+  
 
   #leftside {
     transform: translateY(-60%);
-    width: 61.2%;
+    width: 63.1%;
     margin-top: -1%;
     z-index: 1;
     position: relative;
@@ -758,10 +765,10 @@ h2 {
   }
 
   #rightside {
-    height: 600px;
-    transform: translateY(-120vh);
-    margin-left: 45%;
-    width: 100%;
+    height: 90vh;
+    transform: translateY(-130vh);
+    margin-left: 40%;
+    width: 70%;
     z-index: 2;
     position: relative;
     background-image: url(/images/forside_orange.png);
@@ -777,7 +784,7 @@ h2 {
   }
   .buttontop {
     font-size: 50px;
-    transform: translateY(35vh);
+    transform: translateY(50vh);
     margin-left: 10%;
     position: relative;
     z-index: 3;
@@ -785,7 +792,6 @@ h2 {
 
   .instatext {
     transform: translateY(-45vh);
-    margin-left: 0%;
     width: 100%;
     text-align: center;
   }
@@ -800,20 +806,16 @@ h2 {
     width: 20%;
     flex-flow: wrap;
     transform: translateY(-100vh);
-    height: 200px;
+    height:auto;
+
+    
   }
 
   .produktcard_image {
     width: 100%; /* for at være sikker på at billede scaler korrket med boxen*/
     height: auto;
   }
-  .produkt_text {
-    text-align: center;
-    padding: 5%;
-    width: 60%;
-    padding-top: 0%;
-  }
-
+  
   .containerprodukt {
     display: flex;
     flex-direction: row;
@@ -829,26 +831,31 @@ h2 {
   }
 }
 
-/*produktleggins side css og media querys----------------------------------------------------*/
+/*produktleggins side css og media querys- til det---------------------------------------------------*/
+.hero {display: flex;
+flex-direction: row;
+margin-top: 10%;
+width: 100%;}
+
 .backgroundleggings {
-  margin-top: 11%;
-  width: 26%;
   margin-left: 10%;
+  width: 27%;
 }
 
+.backgroundleggings img{ width:100%}
+
 .containerleggings {
+  margin-left: 10%;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 45%;
+  width: 46%;
   flex-flow: wrap;
-  margin-left: 50%;
-  transform: translateY(-80vh);
 }
+
 
 .info {
   background: none;
-  padding: 2%;
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -859,12 +866,10 @@ h2 {
   width: 25%; /* for at være sikker på at billede scaler korrket med boxen*/
 }
 .leggings_image img {
-  width: 100%;
+  width: 70%;
+  margin-top: 30%;
 }
-.hero {
-  width: 100%;
-  height: 700px;
-}
+
 .card_text {
   width: 100%;
 }
@@ -875,117 +880,58 @@ h2 {
 }
 
 .buttonshopprodukt {
-  background: none;
-  border: 1px solid #000000;
-  display: inline-block;
-  cursor: pointer;
-  color: #000000;
-  padding: 6px 24px;
-  text-decoration: none;
-  text-shadow: 0px 1px 0px #ffffff;
-  font-family: "Raleway", sans-serif;
-  font-size: 20px;
+  
+  font-size: 30px;
   position: relative;
   z-index: 1;
-  transform: translate(-10vh, -8vh);
+  margin-top: 10%;
+
 }
 
 @media only screen and (min-width: 0px) and (max-width: 700px) {
-  .buttonshopprodukt {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    transform: translate(13vh, 7vh);
-=======
-    transform: translate(13vh, 90vh);
->>>>>>> tiljesson
-=======
-    transform: translate(33vh, -10vh);
->>>>>>> tiljesson
-  }
-  .backgroundleggings {
-    margin-top: 5%;
-    margin-left: 0.5%;
-    width: 90%;
-    height: 400px;
-  }
 
+  .hero{display: flex;
+  flex-direction: column;}
+  
+  .backgroundleggings {
+    margin-top: 15%;
+  width: 80%;
+  }
+  
   .containerleggings {
     width: 100%;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    transform: translateY(10vh);
-=======
-    transform: translateY(-10vh);
->>>>>>> tiljesson
-=======
-    transform: translateY(5vh);
->>>>>>> tiljesson
-    margin-bottom: 2%;
-    display: inline-block;
     margin-left: 0%;
   }
 
   .info {
     background: none;
-    padding: 2%;
+  margin-top: 10%;
+    text-align: center;
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    flex-flow: nowrap;
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
   }
 
   .leggings_image {
     width: 50%; /* for at være sikker på at billede scaler korrket med boxen*/
   }
   .leggings_image img {
-    width: 100%;
+    width: 100px;
+    margin-top: 0%;
   }
   .hero {
     width: 100%;
-    height: 1200px;
-  }
-
-  .hero2 {
-    height: 600px;
   }
   .card_text {
+    text-align: center;
     width: 100%;
   }
   .card_text h2 {
-    padding-left: 2%;
-    width: 92%;
-    font-size: 16px;
-    text-align: left;
+    text-align: center;
   }
 
-  footer {
-    transform: translateY(40vh);
-  }
-}
-
-@media only screen and (min-width: 700px) and (max-width: 1250px) {
-  .textwarpper {
-    margin-left: 15%;
-    transform: translatey(20vh);
-    z-index: 3;
-    position: relative;
-  }
-  .containerleggings {
-    transform: translateY(-62vh);
-  }
-  .backgroundleggings {
-    width: 90%;
-    margin-left: -10%;
-  }
-
-  footer {
-    transform: translateY(-26vh);
-  }
-
-  .buttonshopprodukt {
-    transform: translate(-100vh, -45vh);
-    font-size: 18px;
-  }
+  
 }
 
 /*footer------------------------------------------------------------------*/
@@ -1144,7 +1090,7 @@ h2 {
   .footer .footer-right {
     display: block;
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 5px;
     text-align: center;
   }
   .footer .footer-center i {
